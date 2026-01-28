@@ -288,3 +288,15 @@ async def menu_lesson(message: Message, state: FSMContext, bot: Bot):
 async def menu_support(message: Message, state: FSMContext, bot: Bot):
     await cleanup_user_request(message, state, bot)
     await send_and_track(message, state, "@oftobaischoolsupport")
+
+@router.message(F.text.in_({"🚀 Mini kurslar", "🚀 Мини-курсы"}))
+async def menu_mini_courses(message: Message, state: FSMContext, bot: Bot):
+    await cleanup_user_request(message, state, bot)
+    async for session in get_session():
+        lang = await get_user_language(message.from_user.id, session)
+        text = "🚀 <b>Mini Kurslar</b>\n\nTanlang:" if lang == "uz" else "🚀 <b>Мини-курсы</b>\n\nВыберите:"
+        await send_and_track(
+            message, state,
+            text=text,
+            reply_markup=keyboards.get_mini_courses_list_keyboard(lang)
+        )

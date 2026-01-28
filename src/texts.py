@@ -172,6 +172,7 @@ class Texts:
             "menu_lesson": "🎓 Bepul dars",
             "menu_support": "❓ Yordam",
             "menu_course": "📚 Mening kursim",
+            "menu_mini_courses": "🚀 Mini kurslar",
             "course_menu_title": (
                 "📚 <b>AI-KONTENT MASTER</b>\n\n"
                 "Sizning progress: {progress}\n\n"
@@ -435,6 +436,7 @@ class Texts:
             "menu_lesson": "🎓 Урок",
             "menu_support": "❓ Помощь",
             "menu_course": "📚 Мой курс",
+            "menu_mini_courses": "🚀 Мини-курсы",
             "course_menu_title": (
                 "📚 <b>AI-CONTENT MASTER</b>\n\n"
                 "Ваш прогресс: {progress}\n\n"
