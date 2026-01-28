@@ -11,16 +11,18 @@ def get_language_keyboard():
 
 def get_main_menu_keyboard(lang: str = "uz"):
     builder = ReplyKeyboardBuilder()
-    builder.row(KeyboardButton(text=texts.Texts.get("menu_course", lang)))
+    # Row 1: 3 buttons
     builder.row(
-        KeyboardButton(text=texts.Texts.get("menu_tariffs", lang)),
-        KeyboardButton(text=texts.Texts.get("menu_webinar", lang))
-    )
-    builder.row(
+        KeyboardButton(text=texts.Texts.get("menu_course", lang)),
         KeyboardButton(text=texts.Texts.get("menu_mini_courses", lang)),
-        KeyboardButton(text=texts.Texts.get("menu_lesson", lang))
+        KeyboardButton(text=texts.Texts.get("menu_tariffs", lang))
     )
-    builder.row(KeyboardButton(text=texts.Texts.get("menu_support", lang)))
+    # Row 2: 3 buttons
+    builder.row(
+        KeyboardButton(text=texts.Texts.get("menu_webinar", lang)),
+        KeyboardButton(text=texts.Texts.get("menu_lesson", lang)),
+        KeyboardButton(text=texts.Texts.get("menu_support", lang))
+    )
     return builder.as_markup(resize_keyboard=True)
 
 def get_subscription_keyboard(lang: str = "uz"):
