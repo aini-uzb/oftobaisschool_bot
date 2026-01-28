@@ -42,10 +42,16 @@ def force_single_instance():
 force_single_instance()
 # -----------------------------
 
-from src import config
-from src.database.db import init_db
-from src.handlers import user_flow, payments, admin, course, homework, survey
-from src import scheduler_jobs
+try:
+    from src import config
+    from src.database.db import init_db
+    from src.handlers import user_flow, payments, admin, course, homework, survey
+    from src import scheduler_jobs
+except Exception as e:
+    import traceback
+    print("❌ CRITICAL ERROR DURING IMPORTS:")
+    print(traceback.format_exc())
+    sys.exit(1)
 
 from aiogram.client.default import DefaultBotProperties
 from aiogram.enums import ParseMode
