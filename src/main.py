@@ -34,6 +34,8 @@ def force_single_instance():
                         pass
                     except Exception as e:
                         print(f"Failed to kill {pid}: {e}")
+    except FileNotFoundError:
+        print("⚠️ 'ps' command not found, skipping single-instance check (likely in Docker)")
     except Exception as e:
         print(f"Error in single-instance check: {e}")
 
