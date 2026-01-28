@@ -1,6 +1,6 @@
 from aiogram import Router, F, Bot
 from aiogram.filters import CommandStart
-from aiogram.types import Message, CallbackQuery
+from aiogram.types import Message, CallbackQuery, FSInputFile
 from aiogram.exceptions import TelegramBadRequest
 from aiogram.fsm.context import FSMContext
 from sqlalchemy import select, update, func
@@ -47,15 +47,31 @@ async def process_language_selection(callback: CallbackQuery):
         )
         await session.commit()
     
-    # Show Welcome Message
+    # Show Welcome Message with Photo
     # Also show Main Menu (Persistent)
     await callback.message.delete()
     
-    welcome_text = texts.Texts.get("welcome", lang_code).format(name="Bahrom Hakimi")
-    await callback.message.answer(
-        welcome_text,
-        reply_markup=keyboards.get_subscription_keyboard(lang_code)
-    )
+    welcome_text = texts.Texts.get("welcome", lang_code)
+    
+    # Send photo with welcome text as caption
+    import os
+    photo_path = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(__file__))), "assets", "welcome_photo.jpg")
+    
+    try:
+        photo = FSInputFile(photo_path)
+        await callback.message.answer_photo(
+            photo=photo,
+            caption=welcome_text,
+            reply_markup=keyboards.get_subscription_keyboard(lang_code)
+        )
+    except Exception as e:
+        print(f"Error sending welcome photo: {e}")
+        # Fallback to text only
+        await callback.message.answer(
+            welcome_text,
+            reply_markup=keyboards.get_subscription_keyboard(lang_code)
+        )
+    
     # Send persistent menu
     await callback.message.answer(texts.Texts.get("main_menu_text", lang_code), reply_markup=keyboards.get_main_menu_keyboard(lang_code))
 
