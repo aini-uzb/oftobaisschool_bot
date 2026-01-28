@@ -8,10 +8,19 @@ CHANNEL_ID = os.getenv("CHANNEL_ID")  # ID like -100... or username @channel
 CHANNEL_USERNAME = os.getenv("CHANNEL_USERNAME") # To show in link
 # Support multiple admins (comma separated in env)
 raw_admins = os.getenv("ADMIN_ID", "0")
-ADMIN_IDS = [int(x) for x in raw_admins.split(",") if x.strip()]
+ADMIN_IDS = []
+for x in raw_admins.split(","):
+    if x.strip():
+        try:
+            ADMIN_IDS.append(int(x.strip()))
+        except ValueError:
+            print(f"⚠️ Error parsing ADMIN_ID: '{x}' is not an integer")
+
 # Ensure the new admin is always added if not in env
 if 8308877174 not in ADMIN_IDS:
     ADMIN_IDS.append(8308877174)
+
+print(f"✅ Loaded ADMIN_IDS: {ADMIN_IDS}")
 
 LEADS_GROUP_ID = os.getenv("LEADS_GROUP_ID") 
 if not LEADS_GROUP_ID:
