@@ -171,7 +171,8 @@ async def process_watched_lesson(callback: CallbackQuery):
         )
         await session.commit()
 
-        await callback.message.edit_text(texts.Texts.get("survey_intro_1", lang), reply_markup=keyboards.get_lesson_watched_keyboard(lang))
+        # Skip intermediate step (survey_intro_1) as requested and go straight to Survey Intro 2 (Seminar Offer)
+        await callback.message.edit_text(texts.Texts.get("survey_intro_2", lang), reply_markup=keyboards.get_survey_choice_keyboard(lang))
 
 @router.callback_query(F.data == "register_webinar")
 async def process_register_webinar(callback: CallbackQuery):
