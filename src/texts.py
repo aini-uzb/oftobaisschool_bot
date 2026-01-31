@@ -248,14 +248,24 @@ class Texts:
             "survey_intro_2": (
                 "Rahmat fikringiz uchun! 🙏\n\n"
                 "Sizga <b>MAXSUS TAKLIF</b> bor.\n\n"
-                "2 ta <b>BEPUL VEBINAR</b> o'tkazaman:\n\n"
-                "📅 5-FEVRAL — 1-qism\n"
-                "📅 12-FEVRAL — 2-qism\n\n"
-                "Bu oddiy vebinar emas. Bu sizning hayotingizni o'zgartirishi mumkin.\n\n"
+                "🎤 <b>SEMINAR — Toshkent shahrida bo'ladi</b>\n\n"
+                "📅 Sana: <b>14-FEVRAL</b>\n"
+                "📍 Joylashuv: Toshkent (manzil keyinroq)\n"
+                "⏰ Vaqt: 11:00\n"
+                "💰 Narxi: <b>Atigi 97 000 so'm</b>\n\n"
+                "<b>Seminar davomida:</b>\n"
+                "🎬 1 MILLION ko'rishli rolik — KO'Z OLDINGIZDA yarataman\n"
+                "💰 $200 lik AI video — bosqichma-bosqich\n"
+                "🤖 4 ta AI instrument — amaliyotda\n"
+                "❓ Savollaringiz — jonli javob\n"
+                "🎁 <i>Yana 2 maxfiy bonuslar siz kutmoqda</i>\n\n"
+                "<b>Onlayn emas. Yuzma-yuz.</b>\n\n"
+                "99 000 so'm — bir marta choy puli.\n"
+                "Oladigan bilim — bir umrga.\n\n"
                 "⚠️ <b>O'rinlar cheklangan!</b>\n\n"
                 "Joy band qilish uchun 6 ta savolga javob bering.\n"
                 "Menejerimiz siz bilan bog'lanadi.\n\n"
-                "Tayyormisiz?"
+                "<b>Tayyormisiz?</b>"
             ),
             "survey_btn_continue": "✅ Davom etish",
             "survey_btn_later": "🕐 Keyinroq",
@@ -516,16 +526,26 @@ class Texts:
             ),
             "survey_btn_start": "✍️ ПРОЙТИ ОПРОС",
             "survey_intro_2": (
-                "Спасибо за отзыв! 🙏\n\n"
+                "Спасибо за ваш отзыв! 🙏\n\n"
                 "У меня есть <b>СПЕЦИАЛЬНОЕ ПРЕДЛОЖЕНИЕ</b>.\n\n"
-                "Я проведу 2 <b>БЕСПЛАТНЫХ ВЕБИНАРА</b>:\n\n"
-                "📅 5 ФЕВРАЛЯ — 1-я часть\n"
-                "📅 12 ФЕВРАЛЯ — 2-я часть\n\n"
-                "Это не просто вебинар. Это может изменить вашу жизнь.\n\n"
+                "🎤 <b>СЕМИНАР — Состоится в городе Ташкент</b>\n\n"
+                "📅 Дата: <b>14 ФЕВРАЛЯ</b>\n"
+                "📍 Локация: Ташкент (адрес будет позже)\n"
+                "⏰ Время: 11:00\n"
+                "💰 Цена: <b>Всего 97 000 сум</b>\n\n"
+                "<b>На семинаре:</b>\n"
+                "🎬 Ролик на 1 МИЛЛИОН просмотров — создам НА ВАШИХ ГЛАЗАХ\n"
+                "💰 AI видео за $200 — пошагово\n"
+                "🤖 4 AI инструмента — на практике\n"
+                "❓ Ваши вопросы — живые ответы\n"
+                "🎁 <i>Вас ждут ещё 2 секретных бонуса</i>\n\n"
+                "<b>Не онлайн. Вживую.</b>\n\n"
+                "99 000 сум — это один раз попить чай.\n"
+                "Знания, которые вы получите — на всю жизнь.\n\n"
                 "⚠️ <b>Места ограничены!</b>\n\n"
                 "Чтобы занять место, ответьте на 6 вопросов.\n"
                 "Наш менеджер свяжется с вами.\n\n"
-                "Готовы?"
+                "<b>Готовы?</b>"
             ),
             "survey_btn_continue": "✅ Продолжить",
             "survey_btn_later": "🕐 Позже",
