@@ -40,8 +40,8 @@ class Texts:
                 "Endi sizda 2 ta yo'l bor:\n\n"
                 "1️⃣ <b>Kursga hoziroq kirish</b>\n"
                 "   → 16 ta instrument, 40 ta dars, sertifikat\n   \n"
-                "2️⃣ <b>Bepul vebinarni kutish</b>\n"
-                "   → 12 fevral, 18:00 da ko'proq ko'rsataman\n\n"
+                "2️⃣ <b>Seminarni kutish</b>\n"
+                "   → 14-fevral, 11:00 da ko'proq ko'rsataman\n\n"
                 "<b>Nima qilmoqchisiz?</b>"
             ),
             "offer_text": (
@@ -128,26 +128,25 @@ class Texts:
                 "Savollar bo'lsa — yozing!"
             ),
             "webinar_info": (
-                "📅 <b>VEBINAR: 5-FEVRAL (Payshanba)</b>\n"
-                "⏰ 19:00 Toshkent vaqti\n\n"
-                "📍 Zoom / Google meets (linkni botga yoboramiz usha kuni)\n\n"
+                "📅 <b>SEMINAR: 14-FEVRAL (Juma)</b>\n"
+                "⏰ 11:00 Toshkent vaqti\n\n"
+                "📍 Joylashuv: Toshkent (manzilni keyinroq yuboramiz)\n\n"
                 "━━━━━━━━━━━━━━━━━━━\n\n"
-                "<b>VEBINARLARDA NIMALAR KUTMOQDA:</b>\n\n"
-                "🎯 20 ta AI instrument — jonli ko'rsataman\n"
-                "🎯 10K obunachi kontent-plani — o'zingiz uchun tuzasiz\n"
-                "🎯 $7000/oy sirlari — yashirmasdan aytaman\n"
-                "🎯 Har bir videoga $200 olish yo'li\n\n"
-                "━━━━━━━━━━━━━━━━━━━\n\n"
-                "🎁 <b>5-FEVRAL SOVG'ALARI:</b>\n"
-                "(kurs xaridorlari orasida)\n\n"
-                "🎧 AirPods — 1 ta\n"
-                "💵 1 000 000 so'm keshbek — 2 ta o'rin\n\n"
-                "+ Maxfiy bonus vebinar ishtirokchilari uchun!"
+                "<b>SEMINARDA NIMALAR KUTMOQDA:</b>\n\n"
+                "🎯 1 MILLION ko'rishli rolik — KO'Z OLDINGIZDA yarataman\n"
+                "🎯 2 haftada $7000 qanday topdim — faqat AI bilan\n"
+                "🎯 4 ta AI instrument — amaliyotda ko'rsataman\n"
+                "🎯 Kimga sotish va QANDAY sotish — klient topish sirlari\n"
+                "❓ Savol-javob — yuzma-yuz, jonli\n\n"
+                "Onlayn emas. Yuzma-yuz.\n\n"
+                "99 000 so'm — bir marta choy puli.\n"
+                "Oladigan bilim — bir umrga.\n\n"
+                "⚠️ <b>O'rinlar cheklangan!</b>"
             ),
             "webinar_confirmed": (
-                "🎉 <b>Tabriklayman! Siz vebinarga muvaffaqiyatli ro'yxatdan o'tdingiz.</b>\n\n"
-                "Siz <b>{num}-ishtirokchisiz</b> (Jami 1000 ta joy bor).\n\n"
-                f"📅 <b>{config.WEBINAR_DATE}, {config.WEBINAR_TIME}</b> (Toshkent vaqti)\n\n"
+                "🎉 <b>Tabriklayman! Siz seminarga muvaffaqiyatli ro'yxatdan o'tdingiz.</b>\n\n"
+                "Siz <b>{num}-ishtirokchisiz</b>.\n\n"
+                "📅 <b>14-FEVRAL, 11:00</b> (Toshkent)\n\n"
                 "Kuting! Biz albatta eslatamiz."
             ),
             "payment_confirmed_partial": (
@@ -173,7 +172,7 @@ class Texts:
             "language_select": "🇷🇺 Тилни танланг / Выберите язык:",
             "main_menu_text": "🏠",
             "menu_tariffs": "💰 Tariflar",
-            "menu_webinar": "📅 Vebinar",
+            "menu_webinar": "📅 Seminar",
             "menu_lesson": "🎓 Bepul dars",
             "menu_support": "❓ Yordam",
             "menu_course": "📚 Mening kursim",
@@ -247,25 +246,25 @@ class Texts:
             "survey_btn_start": "✍️ OPROSNIKKA O'TISH",
             "survey_intro_2": (
                 "Rahmat fikringiz uchun! 🙏\n\n"
-                "Sizga <b>MAXSUS TAKLIF</b> bor.\n\n"
-                "🎤 <b>SEMINAR — Toshkent shahrida bo'ladi</b>\n\n"
-                "📅 Sana: <b>14-FEVRAL</b>\n"
+                "Sizga MAXSUS TAKLIF bor.\n\n"
+                "🎤 SEMINAR — Toshkentda\n\n"
+                "📅 Sana: 14-FEVRAL\n"
                 "📍 Joylashuv: Toshkent (manzil keyinroq)\n"
                 "⏰ Vaqt: 11:00\n"
-                "💰 Narxi: <b>Atigi 97 000 so'm</b>\n\n"
-                "<b>Seminar davomida:</b>\n"
+                "💰 Narxi: Atigi 99 000 so'm\n\n"
+                "Seminar davomida:\n\n"
                 "🎬 1 MILLION ko'rishli rolik — KO'Z OLDINGIZDA yarataman\n"
-                "💰 $200 lik AI video — bosqichma-bosqich\n"
-                "🤖 4 ta AI instrument — amaliyotda\n"
-                "❓ Savollaringiz — jonli javob\n"
-                "🎁 <i>Yana 2 maxfiy bonuslar siz kutmoqda</i>\n\n"
-                "<b>Onlayn emas. Yuzma-yuz.</b>\n\n"
+                "💰 2 haftada $7000 qanday topdim — faqat AI bilan. Hammasini ochib aytaman.\n"
+                "🤖 4 ta AI instrument — amaliyotda ko'rsataman\n"
+                "💼 Kimga sotish va QANDAY sotish — klient topish sirlari\n"
+                "❓ Savol-javob — yuzma-yuz, jonli\n\n"
+                "Onlayn emas. Yuzma-yuz.\n\n"
                 "99 000 so'm — bir marta choy puli.\n"
                 "Oladigan bilim — bir umrga.\n\n"
-                "⚠️ <b>O'rinlar cheklangan!</b>\n\n"
+                "⚠️ O'rinlar cheklangan!\n\n"
                 "Joy band qilish uchun 6 ta savolga javob bering.\n"
                 "Menejerimiz siz bilan bog'lanadi.\n\n"
-                "<b>Tayyormisiz?</b>"
+                "Tayyormisiz?"
             ),
             "survey_btn_continue": "✅ Davom etish",
             "survey_btn_later": "🕐 Keyinroq",
@@ -328,8 +327,8 @@ class Texts:
                 "Теперь у вас 2 пути:\n\n"
                 "1️⃣ <b>Зайти на курс прямо сейчас</b>\n"
                 "   → 16 инструментов, 40 уроков, сертификат\n   \n"
-                "2️⃣ <b>Ждать бесплатный вебинар</b>\n"
-                "   → 12 февраля, 18:00 покажу больше\n\n"
+                "2️⃣ <b>Ждать семинар</b>\n"
+                "   → 14 февраля, 11:00 покажу больше\n\n"
                 "<b>Что выберете?</b>"
             ),
             "tariffs_desc": (
@@ -407,26 +406,25 @@ class Texts:
                 "Если есть вопросы — пишите!"
             ),
             "webinar_info": (
-                "📅 <b>VEBINAR: 5-FEVRAL (Payshanba)</b>\n"
-                "⏰ 19:00 Toshkent vaqti\n\n"
-                "📍 Zoom / Google meets (linkni botga yoboramiz usha kuni)\n\n"
+                "📅 <b>СЕМИНАР: 14 ФЕВРАЛЯ (Пятница)</b>\n"
+                "⏰ 11:00 Ташкент\n\n"
+                "📍 Локация: Ташкент (адрес будет позже)\n\n"
                 "━━━━━━━━━━━━━━━━━━━\n\n"
-                "<b>VEBINARLARDA NIMALAR KUTMOQDA:</b>\n\n"
-                "🎯 20 ta AI instrument — jonli ko'rsataman\n"
-                "🎯 10K obunachi kontent-plani — o'zingiz uchun tuzasiz\n"
-                "🎯 $7000/oy sirlari — yashirmasdan aytaman\n"
-                "🎯 Har bir videoga $200 olish yo'li\n\n"
-                "━━━━━━━━━━━━━━━━━━━\n\n"
-                "🎁 <b>5-FEVRAL SOVG'ALARI:</b>\n"
-                "(kurs xaridorlari orasida)\n\n"
-                "🎧 AirPods — 1 ta\n"
-                "💵 1 000 000 so'm keshbek — 2 ta o'rin\n\n"
-                "+ Maxfiy bonus vebinar ishtirokchilari uchun!"
+                "<b>ЧТО ЖДЕТ ВАС НА СЕМИНАРЕ:</b>\n\n"
+                "🎯 Ролик на 1 МИЛЛИОН просмотров — создам ПРИ ВАС\n"
+                "🎯 Как я заработал $7000 за 2 недели — только на AI\n"
+                "🎯 4 AI инструмента — покажу на практике\n"
+                "🎯 Кому продавать и КАК — секреты поиска клиентов\n"
+                "❓ Вопрос-ответ — вживую\n\n"
+                "Не онлайн. Вживую.\n\n"
+                "99 000 сум — это один раз попить чай.\n"
+                "Знания, которые вы получите — на всю жизнь.\n\n"
+                "⚠️ <b>Места ограничены!</b>"
             ),
             "webinar_confirmed": (
-                "🎉 <b>Поздравляем! Вы успешно зарегистрировались на вебинар.</b>\n\n"
-                "Вы <b>{num}-й участник</b> (Всего 1000 мест).\n\n"
-                f"📅 <b>{config.WEBINAR_DATE}, {config.WEBINAR_TIME}</b> (Ташкент)\n\n"
+                "🎉 <b>Поздравляем! Вы успешно зарегистрировались на семинар.</b>\n\n"
+                "Вы <b>{num}-й участник</b>.\n\n"
+                "📅 <b>14 ФЕВРАЛЯ, 11:00</b> (Ташкент)\n\n"
                 "Мы напомним!"
             ),
             "payment_confirmed_partial": (
@@ -452,7 +450,7 @@ class Texts:
             "language_select": "🇷🇺 Тилни танланг / Выберите язык:",
             "main_menu_text": "🏠 <b>Главное меню / Асосий меню</b>",
             "menu_tariffs": "💰 Тарифы",
-            "menu_webinar": "📅 Вебинар",
+            "menu_webinar": "📅 Семинар",
             "menu_lesson": "🎓 Урок",
             "menu_support": "❓ Помощь",
             "menu_course": "📚 Мой курс",
@@ -527,25 +525,25 @@ class Texts:
             "survey_btn_start": "✍️ ПРОЙТИ ОПРОС",
             "survey_intro_2": (
                 "Спасибо за ваш отзыв! 🙏\n\n"
-                "У меня есть <b>СПЕЦИАЛЬНОЕ ПРЕДЛОЖЕНИЕ</b>.\n\n"
-                "🎤 <b>СЕМИНАР — Состоится в городе Ташкент</b>\n\n"
-                "📅 Дата: <b>14 ФЕВРАЛЯ</b>\n"
+                "У меня есть СПЕЦИАЛЬНОЕ ПРЕДЛОЖЕНИЕ.\n\n"
+                "🎤 СЕМИНАР — В Ташкенте\n\n"
+                "📅 Дата: 14 ФЕВРАЛЯ\n"
                 "📍 Локация: Ташкент (адрес будет позже)\n"
                 "⏰ Время: 11:00\n"
-                "💰 Цена: <b>Всего 97 000 сум</b>\n\n"
-                "<b>На семинаре:</b>\n"
-                "🎬 Ролик на 1 МИЛЛИОН просмотров — создам НА ВАШИХ ГЛАЗАХ\n"
-                "💰 AI видео за $200 — пошагово\n"
-                "🤖 4 AI инструмента — на практике\n"
-                "❓ Ваши вопросы — живые ответы\n"
-                "🎁 <i>Вас ждут ещё 2 секретных бонуса</i>\n\n"
-                "<b>Не онлайн. Вживую.</b>\n\n"
+                "💰 Цена: Всего 99 000 сум\n\n"
+                "На семинаре:\n\n"
+                "🎬 Ролик на 1 МИЛЛИОН просмотров — создам ПРИ ВАС\n"
+                "💰 Как я заработал $7000 за 2 недели — только на AI. Расскажу все секреты.\n"
+                "🤖 4 AI инструмента — покажу на практике\n"
+                "💼 Кому продавать и КАК — секреты поиска клиентов\n"
+                "❓ Вопрос-ответ — вживую, лично\n\n"
+                "Не онлайн. Вживую.\n\n"
                 "99 000 сум — это один раз попить чай.\n"
                 "Знания, которые вы получите — на всю жизнь.\n\n"
-                "⚠️ <b>Места ограничены!</b>\n\n"
+                "⚠️ Места ограничены!\n\n"
                 "Чтобы занять место, ответьте на 6 вопросов.\n"
                 "Наш менеджер свяжется с вами.\n\n"
-                "<b>Готовы?</b>"
+                "Готовы?"
             ),
             "survey_btn_continue": "✅ Продолжить",
             "survey_btn_later": "🕐 Позже",
@@ -568,21 +566,20 @@ class Texts:
             "survey_completed": (
                 "✅ <b>Спасибо! Ваши данные приняты.</b>\n\n"
                 "━━━━━━━━━━━━━━━━━━━\n\n"
-                "📅 <b>ВЕБИНАР: 5 ФЕВРАЛЯ (Четверг)</b>\n"
-                "⏰ 19:00 по Ташкенту\n\n"
-                "📍 Zoom / Google meets (ссылку пришлем в бота в тот же день)\n\n"
+                "📅 <b>СЕМИНАР: 14 ФЕВРАЛЯ (Пятница)</b>\n"
+                "⏰ 11:00 Ташкент\n\n"
+                "📍 Локация: Ташкент (адрес будет позже)\n\n"
                 "━━━━━━━━━━━━━━━━━━━\n\n"
-                "<b>ЧТО ВАС ЖДЕТ НА ВЕБИНАРАХ:</b>\n\n"
-                "🎯 20 AI инструментов — покажу вживую\n"
-                "🎯 Контент-план на 10K подписчиков — составите для себя\n"
-                "🎯 Секреты $7000/мес — расскажу честно\n"
-                "🎯 Как брать $200 за один ролик\n\n"
-                "━━━━━━━━━━━━━━━━━━━\n\n"
-                "🎁 <b>ПОДАРКИ 5 ФЕВРАЛЯ:</b>\n"
-                "(среди покупателей курса)\n\n"
-                "🎧 AirPods — 1 шт\n"
-                "💵 1 000 000 сум кэшбек — 2 места\n\n"
-                "+ Секретный бонус для участников вебинара!"
+                "<b>ЧТО ЖДЕТ ВАС НА СЕМИНАРЕ:</b>\n\n"
+                "🎯 Ролик на 1 МИЛЛИОН просмотров — создам ПРИ ВАС\n"
+                "🎯 Как я заработал $7000 за 2 недели — только на AI\n"
+                "🎯 4 AI инструмента — покажу на практике\n"
+                "🎯 Кому продавать и КАК — секреты поиска клиентов\n"
+                "❓ Вопрос-ответ — вживую\n\n"
+                "Не онлайн. Вживую.\n\n"
+                "99 000 сум — это один раз попить чай.\n"
+                "Знания, которые вы получите — на всю жизнь.\n\n"
+                "⚠️ <b>Места ограничены!</b>"
             ),
 
         }

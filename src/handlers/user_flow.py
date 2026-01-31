@@ -275,7 +275,7 @@ async def menu_tariffs(message: Message, state: FSMContext, bot: Bot):
             reply_markup=keyboards.get_tariffs_keyboard(lang)
         )
 
-@router.message(F.text.in_({"📅 Вебинар", "📅 Vebinar"}))
+@router.message(F.text.in_({"📅 Вебинар", "📅 Vebinar", "📅 Seminar", "📅 Семинар"}))
 async def menu_webinar(message: Message, state: FSMContext, bot: Bot):
      await cleanup_user_request(message, state, bot)
      async for session in get_session():
