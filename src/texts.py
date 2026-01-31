@@ -10,11 +10,11 @@ class Texts:
                 "<b>Natija?</b>\n"
                 "• Har oy <b>$7,000</b> daromad faqat Sun'iy Intellektdan\n"
                 "• Bitta reelsim <b>9 MILLION</b> prosmotr yig'di\n\n"
-                "🎁 Sizga <b>BEPUL dars</b> tayyorladim:\n"
-                "<i>\"$200 lik rolik qanday yasaladi\"</i>\n\n"
-                "📥 Olish uchun Telegram kanalimga <b>obuna bo'ling</b> — \n"
-                "u yerda yana ko'p foydali kontentlar bor 👇"
+                "Quyidagi bo'limlardan birini tanlang 👇"
             ),
+            "btn_seminar": "📅 Seminarga yozilish",
+            "btn_ai_sites": "🤖 AI Saytlar (Top 5)",
+            "btn_free_lesson": "🎓 Bepul darsni ko'rish",
             "not_subscribed": (
                 "❌ <b>Siz hali kanalga obuna bo'lmagansiz.</b>\n\n"
                 "Obuna bo'ling va qaytadan tekshiring 👇"
@@ -329,11 +329,11 @@ class Texts:
                 "<b>Результат?</b>\n"
                 "• Каждый месяц <b>$7,000</b> дохода только от ИИ\n"
                 "• Один reels набрал <b>9 МИЛЛИОНОВ</b> просмотров\n\n"
-                "🎁 Я приготовил для вас <b>БЕСПЛАТНЫЙ урок</b>:\n"
-                "<i>\"Как создать ролик за $200\"</i>\n\n"
-                "📥 Чтобы получить, <b>подпишитесь</b> на мой Telegram канал — \n"
-                "там ещё много полезного контента 👇"
+                "Выберите один из разделов ниже 👇"
             ),
+            "btn_seminar": "📅 Записаться на семинар",
+            "btn_ai_sites": "🤖 AI Сайты (Топ 5)",
+            "btn_free_lesson": "🎓 Смотреть бесплатный урок",
             "not_subscribed": (
                 "❌ <b>Вы еще не подписались на канал.</b>\n\n"
                 "Подпишитесь и проверьте снова 👇"

@@ -34,6 +34,23 @@ def get_seminar_keyboard(lang: str = "uz"):
     builder.row(InlineKeyboardButton(text=text_manager, callback_data="survey_start_q1"))
     return builder.as_markup()
 
+def get_welcome_keyboard(lang: str = "uz"):
+    """
+    Main Start Keyboard:
+    1. Seminar
+    2. AI Sites
+    3. Free Lesson
+    """
+    builder = ReplyKeyboardBuilder()
+    # Row 1: Seminar
+    builder.row(KeyboardButton(text=texts.Texts.get("btn_seminar", lang)))
+    # Row 2: AI Sites
+    builder.row(KeyboardButton(text=texts.Texts.get("btn_ai_sites", lang)))
+    # Row 3: Free Lesson
+    builder.row(KeyboardButton(text=texts.Texts.get("btn_free_lesson", lang)))
+    
+    return builder.as_markup(resize_keyboard=True)
+
 def get_ai_services_upsell_keyboard(lang: str = "uz"):
     text_signup = texts.Texts.get("ai_upsell_btn_signup", lang)
     text_menu = texts.Texts.get("ai_upsell_btn_menu", lang)

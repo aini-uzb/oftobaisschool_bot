@@ -72,8 +72,8 @@ async def process_language_selection(callback: CallbackQuery):
             reply_markup=keyboards.get_subscription_keyboard(lang_code)
         )
     
-    # Send persistent menu
-    await callback.message.answer(texts.Texts.get("main_menu_text", lang_code), reply_markup=keyboards.get_main_menu_keyboard(lang_code))
+    # Send persistent menu with 3 buttons
+    await callback.message.answer(texts.Texts.get("main_menu_text", lang_code), reply_markup=keyboards.get_welcome_keyboard(lang_code))
 
 
 async def check_subscription(bot: Bot, user_id: int, channel_id: str) -> bool:
@@ -129,6 +129,11 @@ async def process_check_subscription(callback: CallbackQuery, bot: Bot):
         else:
             await callback.answer(texts.Texts.get("not_subscribed", lang), show_alert=True)
             await callback.message.answer(texts.Texts.get("not_subscribed", lang), reply_markup=keyboards.get_retry_subscription_keyboard(lang))
+
+@router.callback_query(F.data == "check_subscription_lesson")
+async def process_check_subscription_lesson(callback: CallbackQuery, bot: Bot):
+    # Wrapper for the Lesson check
+    await process_check_subscription(callback, bot)
 
 @router.callback_query(F.data == "get_lesson_2")
 async def process_get_lesson_2(callback: CallbackQuery, bot: Bot):
@@ -277,7 +282,60 @@ async def menu_webinar(message: Message, state: FSMContext, bot: Bot):
             reply_markup=keyboards.get_seminar_keyboard(lang)
         )
 
-@router.message(F.text.in_({"🎓 Бепул дарс", "🎓 Урок", "🎓 Dars", "🎓 Bepul dars"}))
+@router.message(F.text.in_({"📅 Seminarga yozilish", "📅 Записаться на семинар"}))
+async def menu_seminar_btn(message: Message, state: FSMContext, bot: Bot):
+    await menu_webinar(message, state, bot)
+
+@router.message(F.text.in_({"🤖 AI Saytlar (Top 5)", "🤖 AI Сайты (Топ 5)"}))
+async def menu_ai_sites_btn(message: Message, state: FSMContext, bot: Bot):
+    await menu_ai_services(message, state, bot)
+
+@router.message(F.text.in_({"🎓 Bepul darsni ko'rish", "🎓 Смотреть бесплатный урок"}))
+async def menu_free_lesson_btn(message: Message, state: FSMContext, bot: Bot):
+    await cleanup_user_request(message, state, bot)
+    
+    user_id = message.from_user.id
+    async for session in get_session():
+        lang = await get_user_language(user_id, session)
+        
+        is_subscribed = await check_subscription(bot, user_id, config.CHANNEL_ID)
+        
+        if is_subscribed:
+            # Manually trigger the "I am subscribed" logic for lesson
+           # We can reuse process_check_subscription logic but we need a mock callback or extract logic.
+           # Let's extract logic or just create a specific flow here.
+           # To save time and keep it clean, let's just copy the success logic from process_check_subscription (lines 107-128)
+           # OR better: make a shared function `send_lesson_1(bot, user_id, lang)`
+           
+           await message.answer(texts.Texts.get("lesson_intro", lang))
+           
+           FREE_CH_ID = -1003444130461 
+           try:
+                await bot.copy_message(chat_id=user_id, from_chat_id=FREE_CH_ID, message_id=3)
+           except:
+                await message.answer("📹 [VIDEO 1 LOADING ERROR]")
+
+           await message.answer(texts.Texts.get("lesson_materials", lang))
+           try:
+                await bot.copy_message(chat_id=user_id, from_chat_id=FREE_CH_ID, message_id=5)
+                await bot.copy_message(chat_id=user_id, from_chat_id=FREE_CH_ID, message_id=8)
+           except:
+                pass
+            
+           await asyncio.sleep(4) 
+           await message.answer(texts.Texts.get("lesson_1_ask", lang), reply_markup=keyboards.get_lesson_1_watched_keyboard(lang))
+
+        else:
+            text = texts.Texts.get("not_subscribed", lang)
+            # Use a keyboard that calls "check_subscription_lesson" 
+            # We used "check_subscription" for lesson before (line 93).
+            # But line 93 logic is exactly what we want.
+            
+            builder = keyboards.InlineKeyboardBuilder()
+            builder.row(keyboards.InlineKeyboardButton(text=("📢 Kanalga o'tish" if lang == "uz" else "📢 Перейти в канал"), url=f"https://t.me/{config.CHANNEL_USERNAME.replace('@', '')}"))
+            builder.row(keyboards.InlineKeyboardButton(text=("✅ Obuna bo'ldim" if lang == "uz" else "✅ Я подписался"), callback_data="check_subscription")) # Reusing generic
+            
+            await message.answer(text, reply_markup=builder.as_markup())
 async def menu_lesson(message: Message, state: FSMContext, bot: Bot):
      await cleanup_user_request(message, state, bot)
      async for session in get_session():
