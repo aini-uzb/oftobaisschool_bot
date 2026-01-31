@@ -136,8 +136,12 @@ async def process_q6(message: Message, state: FSMContext, bot: Bot):
     # 1. Send "Thank you" with Main Menu (Reply Keyboard)
     await message.answer(texts.Texts.get("survey_completed", lang), reply_markup=keyboards.get_main_menu_keyboard(lang))
     
-    # 2. Send Webinar Info with "Register" button (Inline Keyboard)
-    # User requested: "Client passed survey -> got info -> pressed book"
-    await message.answer(texts.Texts.get("webinar_info", lang), reply_markup=keyboards.get_webinar_keyboard(lang))
+    # 2. Update logic: Use just "Manager will contact" message.
+    # The survey_completed text already includes the "Manager will contact" info or we can create a specific one.
+    # The existing "survey_completed" in texts.py (lines 566+) in RU version has webinar details! 
+    # But wait, user said "after answering the last question ... soon our manager will contact you."
+    # The current text `survey_completed` (RU/UZ) has Webinar Info.
+    # I should change `survey_completed` text in `texts.py` to be just "Thank you. Manager will contact."
+    # BUT FIRST, let's remove the extra message here.
     
     await state.clear()

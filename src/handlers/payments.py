@@ -214,7 +214,7 @@ async def process_receipt_upload(message: Message, state: FSMContext, bot: Bot):
         await session.commit()
         await session.refresh(payment)
         
-        # Notify Admin (Admin language is likely irrelevant mostly, or defaults)
+    # Notify Admin (Admin language is likely irrelevant mostly, or defaults)
         admin_text = (
             f"🆕 ЯНГИ ТЎЛОВ / NEW PAYMENT!\n\n"
             f"👤 User: {message.from_user.full_name} (@{message.from_user.username})\n"
@@ -239,4 +239,8 @@ async def process_receipt_upload(message: Message, state: FSMContext, bot: Bot):
             print(f"Failed to notify admins: {e}")
 
     await state.clear()
-    await message.answer(texts.Texts.get("receipt_accepted", lang))
+    
+    if tariff == "SEMINAR":
+        await message.answer(texts.Texts.get("seminar_receipt_received", lang))
+    else:
+        await message.answer(texts.Texts.get("receipt_accepted", lang))

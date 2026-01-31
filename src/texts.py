@@ -131,6 +131,7 @@ class Texts:
                 "📅 <b>SEMINAR: 14-FEVRAL (Juma)</b>\n"
                 "⏰ 11:00 Toshkent vaqti\n\n"
                 "📍 Joylashuv: Toshkent (manzilni keyinroq yuboramiz)\n\n"
+                "🔥 <b>35 ta joy allaqachon band qilindi!</b>\n\n"
                 "━━━━━━━━━━━━━━━━━━━\n\n"
                 "<b>SEMINARDA NIMALAR KUTMOQDA:</b>\n\n"
                 "🎯 1 MILLION ko'rishli rolik — KO'Z OLDINGIZDA yarataman\n"
@@ -176,7 +177,38 @@ class Texts:
             "menu_lesson": "🎓 Bepul dars",
             "menu_support": "❓ Yordam",
             "menu_course": "📚 Mening kursim",
-            "menu_mini_courses": "🚀 Mini kurslar",
+            "menu_ai_services": "🤖 AI Xizmatlar",
+            "ai_services_intro": "🚀 <b>Eng foydali AI xizmatlar ro'yxati:</b>\n\n(To'liq ro'yxatni ko'rish uchun kanalga obuna bo'lishingiz kerak)",
+            "ai_services_list": (
+                "🤖 <b>TOP AI XIZMATLAR:</b>\n\n"
+                "1. <b>ChatGPT</b> - Matn va g'oyalar uchun\n"
+                "2. <b>Midjourney</b> - Rasmlar uchun\n"
+                "3. <b>Runway Gen-2</b> - Videolar uchun\n"
+                "4. <b>ElevenLabs</b> - Ovoz uchun\n"
+                "5. <b>HeyGen</b> - Avatar videolar uchun\n\n"
+                "<i>Ro'yxat yana to'ldiriladi...</i>"
+            ),
+            "ai_services_outro": (
+                "Qanday? Bu hali boshlanishi! 🚀\n\n"
+                "Seminarda men bularni <b>qanday ishlatib pul topishni</b> o'rgataman.\n\n"
+                "Seminarga yozilamizmi?"
+            ),
+            "ai_upsell_btn_signup": "🔥 Seminarga yozilish",
+            "ai_upsell_btn_menu": "🏠 Bosh menyu",
+            "seminar_pay_option": "💳 To'lov qilish",
+            "seminar_manager_option": "👨‍💼 Menejer bilan bog'lanish",
+            "seminar_payment_instructions": (
+                "💳 <b>Seminar uchun to'lov</b>\n\n"
+                "Narxi: <b>99 000 so'm</b>\n\n"
+                "Karta raqami:\n"
+                f"<code>{config.CARD_NUMBER}</code>\n"
+                f"<b>{config.CARD_HOLDER}</b>\n\n"
+                "To'lov qilgach, chekni shu yerga yuboring 👇"
+            ),
+            "seminar_receipt_received": (
+                "✅ <b>Chek qabul qilindi!</b>\n\n"
+                "Adminlarimiz tekshirib, sizga tez orada aloqaga chiqishadi va manzilni yuborishadi."
+            ),
             "course_menu_title": (
                 "📚 <b>AI-KONTENT MASTER</b>\n\n"
                 "Sizning progress: {progress}\n\n"
@@ -286,7 +318,7 @@ class Texts:
             ),
             "survey_completed": (
                 "✅ <b>Rahmat! Ma'lumotlaringiz qabul qilindi.</b>\n\n"
-                "Quyida vebinar haqida ma'lumot 👇"
+                "Tez orada menejerimiz siz bilan bog'lanib, barcha ma'lumotlarni beradi."
             )
         },
         "ru": {
@@ -409,6 +441,7 @@ class Texts:
                 "📅 <b>СЕМИНАР: 14 ФЕВРАЛЯ (Пятница)</b>\n"
                 "⏰ 11:00 Ташкент\n\n"
                 "📍 Локация: Ташкент (адрес будет позже)\n\n"
+                "🔥 <b>35 мест уже занято!</b>\n\n"
                 "━━━━━━━━━━━━━━━━━━━\n\n"
                 "<b>ЧТО ЖДЕТ ВАС НА СЕМИНАРЕ:</b>\n\n"
                 "🎯 Ролик на 1 МИЛЛИОН просмотров — создам ПРИ ВАС\n"
@@ -454,7 +487,38 @@ class Texts:
             "menu_lesson": "🎓 Урок",
             "menu_support": "❓ Помощь",
             "menu_course": "📚 Мой курс",
-            "menu_mini_courses": "🚀 Мини-курсы",
+            "menu_ai_services": "🤖 AI Сервисы",
+            "ai_services_intro": "🚀 <b>Список лучших AI сервисов:</b>\n\n(Подпишитесь на канал, чтобы увидеть полный список)",
+            "ai_services_list": (
+                "🤖 <b>ТОП AI СЕРВИСЫ:</b>\n\n"
+                "1. <b>ChatGPT</b> - Для текстов и идей\n"
+                "2. <b>Midjourney</b> - Для изображений\n"
+                "3. <b>Runway Gen-2</b> - Для видео\n"
+                "4. <b>ElevenLabs</b> - Для голоса\n"
+                "5. <b>HeyGen</b> - Для аватаров\n\n"
+                "<i>Список будет пополняться...</i>"
+            ),
+            "ai_services_outro": (
+                "Как вам? Это только начало! 🚀\n\n"
+                "На семинаре я научу, <b>как на этом зарабатывать</b>.\n\n"
+                "Запишемся на семинар?"
+            ),
+            "ai_upsell_btn_signup": "🔥 Записаться на семинар",
+            "ai_upsell_btn_menu": "🏠 Главное меню",
+            "seminar_pay_option": "💳 Оплатить",
+            "seminar_manager_option": "👨‍💼 Связаться с менеджером",
+            "seminar_payment_instructions": (
+                "💳 <b>Оплата за семинар</b>\n\n"
+                "Цена: <b>99 000 сум</b>\n\n"
+                "Номер карты:\n"
+                f"<code>{config.CARD_NUMBER}</code>\n"
+                f"<b>{config.CARD_HOLDER}</b>\n\n"
+                "После оплаты отправьте чек сюда 👇"
+            ),
+            "seminar_receipt_received": (
+                "✅ <b>Чек принят!</b>\n\n"
+                "Админы проверят и скоро свяжутся с вами, отправив адрес."
+            ),
             "course_menu_title": (
                 "📚 <b>AI-CONTENT MASTER</b>\n\n"
                 "Ваш прогресс: {progress}\n\n"
@@ -565,22 +629,8 @@ class Texts:
             ),
             "survey_completed": (
                 "✅ <b>Спасибо! Ваши данные приняты.</b>\n\n"
-                "━━━━━━━━━━━━━━━━━━━\n\n"
-                "📅 <b>СЕМИНАР: 14 ФЕВРАЛЯ (Пятница)</b>\n"
-                "⏰ 11:00 Ташкент\n\n"
-                "📍 Локация: Ташкент (адрес будет позже)\n\n"
-                "━━━━━━━━━━━━━━━━━━━\n\n"
-                "<b>ЧТО ЖДЕТ ВАС НА СЕМИНАРЕ:</b>\n\n"
-                "🎯 Ролик на 1 МИЛЛИОН просмотров — создам ПРИ ВАС\n"
-                "🎯 Как я заработал $7000 за 2 недели — только на AI\n"
-                "🎯 4 AI инструмента — покажу на практике\n"
-                "🎯 Кому продавать и КАК — секреты поиска клиентов\n"
-                "❓ Вопрос-ответ — вживую\n\n"
-                "Не онлайн. Вживую.\n\n"
-                "99 000 сум — это один раз попить чай.\n"
-                "Знания, которые вы получите — на всю жизнь.\n\n"
-                "⚠️ <b>Места ограничены!</b>"
-            ),
+                "Скоро наш менеджер свяжется с вами и предоставит всю информацию."
+            )
 
         }
     }

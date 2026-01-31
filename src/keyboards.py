@@ -14,7 +14,7 @@ def get_main_menu_keyboard(lang: str = "uz"):
     # Row 1: 3 buttons
     builder.row(
         KeyboardButton(text=texts.Texts.get("menu_course", lang)),
-        KeyboardButton(text=texts.Texts.get("menu_mini_courses", lang)),
+        KeyboardButton(text=texts.Texts.get("menu_ai_services", lang)),
         KeyboardButton(text=texts.Texts.get("menu_tariffs", lang))
     )
     # Row 2: 3 buttons
@@ -24,6 +24,24 @@ def get_main_menu_keyboard(lang: str = "uz"):
         KeyboardButton(text=texts.Texts.get("menu_support", lang))
     )
     return builder.as_markup(resize_keyboard=True)
+
+def get_seminar_keyboard(lang: str = "uz"):
+    text_pay = texts.Texts.get("seminar_pay_option", lang)
+    text_manager = texts.Texts.get("seminar_manager_option", lang)
+    
+    builder = InlineKeyboardBuilder()
+    builder.row(InlineKeyboardButton(text=text_pay, callback_data="seminar_pay"))
+    builder.row(InlineKeyboardButton(text=text_manager, callback_data="survey_start_q1"))
+    return builder.as_markup()
+
+def get_ai_services_upsell_keyboard(lang: str = "uz"):
+    text_signup = texts.Texts.get("ai_upsell_btn_signup", lang)
+    text_menu = texts.Texts.get("ai_upsell_btn_menu", lang)
+    
+    builder = InlineKeyboardBuilder()
+    builder.row(InlineKeyboardButton(text=text_signup, callback_data="register_webinar")) # Reusing register_webinar for Seminar flow entry
+    builder.row(InlineKeyboardButton(text=text_menu, callback_data="delete_msg"))
+    return builder.as_markup()
 
 def get_subscription_keyboard(lang: str = "uz"):
     text_channel = "📢 Kanalga o'tish" if lang == "uz" else "📢 Перейти в канал"
