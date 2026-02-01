@@ -177,10 +177,10 @@ class Texts:
             "menu_lesson": "🎓 Bepul dars",
             "menu_support": "❓ Yordam",
             "menu_course": "📚 Mening kursim",
-            "menu_ai_services": "🤖 AI Xizmatlar",
-            "ai_services_intro": "🚀 <b>Eng foydali AI xizmatlar ro'yxati:</b>\n\n(To'liq ro'yxatni ko'rish uchun kanalga obuna bo'lishingiz kerak)",
+            "menu_ai_services": "🤖 AI Servislar",
+            "ai_services_intro": "🚀 <b>Eng foydali AI servislar ro'yxati:</b>\n\n(To'liq ro'yxatni ko'rish uchun kanalga obuna bo'lishingiz kerak)",
             "ai_services_list": (
-                "🤖 <b>TOP AI XIZMATLAR:</b>\n\n"
+                "🤖 <b>TOP AI SERVISLAR:</b>\n\n"
                 "1. <b>ChatGPT</b> - Matn va g'oyalar uchun\n"
                 "2. <b>Midjourney</b> - Rasmlar uchun\n"
                 "3. <b>Runway Gen-2</b> - Videolar uchun\n"

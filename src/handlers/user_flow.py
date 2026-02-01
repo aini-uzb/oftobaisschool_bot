@@ -354,7 +354,7 @@ async def menu_support(message: Message, state: FSMContext, bot: Bot):
     await cleanup_user_request(message, state, bot)
     await send_and_track(message, state, "@oftobaischoolsupport")
 
-@router.message(F.text.in_({"🚀 Mini kurslar", "🚀 Мини-курсы", "🤖 AI Xizmatlar", "🤖 AI Сервисы"}))
+@router.message(F.text.in_({"🚀 Mini kurslar", "🚀 Мини-курсы", "🤖 AI Servislar", "🤖 AI Сервисы"}))
 async def menu_ai_services(message: Message, state: FSMContext, bot: Bot, from_callback: bool = False, make_new: bool = False):
     # This handler handles both the Menu button and the "Check Subscription" callback loop if we adapt it
     
