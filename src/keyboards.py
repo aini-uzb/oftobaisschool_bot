@@ -51,6 +51,23 @@ def get_welcome_keyboard(lang: str = "uz"):
     
     return builder.as_markup(resize_keyboard=True)
 
+def get_welcome_inline_keyboard(lang: str = "uz"):
+    """
+    Welcome Inline Keyboard (shown in chat after subscription):
+    1. Seminar
+    2. AI Sites
+    3. Free Lesson
+    """
+    builder = InlineKeyboardBuilder()
+    # Row 1: Seminar
+    builder.row(InlineKeyboardButton(text=texts.Texts.get("btn_seminar", lang), callback_data="btn_seminar"))
+    # Row 2: AI Sites
+    builder.row(InlineKeyboardButton(text=texts.Texts.get("btn_ai_sites", lang), callback_data="btn_ai_sites"))
+    # Row 3: Free Lesson
+    builder.row(InlineKeyboardButton(text=texts.Texts.get("btn_free_lesson", lang), callback_data="btn_free_lesson"))
+    
+    return builder.as_markup()
+
 def get_ai_services_upsell_keyboard(lang: str = "uz"):
     text_signup = texts.Texts.get("ai_upsell_btn_signup", lang)
     text_menu = texts.Texts.get("ai_upsell_btn_menu", lang)

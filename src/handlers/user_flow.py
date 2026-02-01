@@ -72,8 +72,8 @@ async def process_language_selection(callback: CallbackQuery):
             reply_markup=keyboards.get_subscription_keyboard(lang_code)
         )
     
-    # Send persistent menu with 3 buttons
-    await callback.message.answer(texts.Texts.get("main_menu_text", lang_code), reply_markup=keyboards.get_welcome_keyboard(lang_code))
+    # Just show welcome photo WITHOUT bottom keyboard
+    # User will get inline keyboard after subscription
 
 
 async def check_subscription(bot: Bot, user_id: int, channel_id: str) -> bool:
@@ -104,28 +104,12 @@ async def process_check_subscription(callback: CallbackQuery, bot: Bot):
             await session.commit()
 
             await callback.message.delete()
-            await callback.message.answer(texts.Texts.get("lesson_intro", lang))
             
-            # Lesson 1 (Video) - Msg ID 3
-            FREE_CH_ID = -1003444130461 
-            try:
-                await bot.copy_message(chat_id=callback.from_user.id, from_chat_id=FREE_CH_ID, message_id=3)
-            except Exception as e:
-                print(f"Error copying Lesson 1: {e}")
-                await callback.message.answer("📹 [VIDEO 1 LOADING ERROR]")
-
-            # Materials IMMEDIATELY after Lesson 1
-            await callback.message.answer(texts.Texts.get("lesson_materials", lang))
-            try:
-                # Presentation (Msg 5)
-                await bot.copy_message(chat_id=callback.from_user.id, from_chat_id=FREE_CH_ID, message_id=5)
-                # Prompts (Msg 8)
-                await bot.copy_message(chat_id=callback.from_user.id, from_chat_id=FREE_CH_ID, message_id=8)
-            except Exception as e:
-                print(f"Error copying materials: {e}")
-
-            await asyncio.sleep(4) 
-            await callback.message.answer(texts.Texts.get("lesson_1_ask", lang), reply_markup=keyboards.get_lesson_1_watched_keyboard(lang))
+            # Send welcome message with INLINE keyboard (in chat)
+            await callback.message.answer(
+                texts.Texts.get("welcome_after_subscription", lang),
+                reply_markup=keyboards.get_welcome_inline_keyboard(lang)
+            )
         else:
             await callback.answer(texts.Texts.get("not_subscribed", lang), show_alert=True)
             await callback.message.answer(texts.Texts.get("not_subscribed", lang), reply_markup=keyboards.get_retry_subscription_keyboard(lang))
@@ -134,6 +118,52 @@ async def process_check_subscription(callback: CallbackQuery, bot: Bot):
 async def process_check_subscription_lesson(callback: CallbackQuery, bot: Bot):
     # Wrapper for the Lesson check
     await process_check_subscription(callback, bot)
+
+# Inline button handlers (after subscription)
+@router.callback_query(F.data == "btn_seminar")
+async def handle_btn_seminar(callback: CallbackQuery):
+    async for session in get_session():
+        lang = await get_user_language(callback.from_user.id, session)
+        await callback.message.edit_text(texts.Texts.get("webinar_info", lang), reply_markup=keyboards.get_seminar_keyboard(lang))
+
+@router.callback_query(F.data == "btn_ai_sites")
+async def handle_btn_ai_sites(callback: CallbackQuery, bot: Bot):
+    async for session in get_session():
+        lang = await get_user_language(callback.from_user.id, session)
+        
+        # Always show AI services (no need to check subscription again, they already subscribed)
+        await callback.message.edit_text(texts.Texts.get("ai_services_list", lang), parse_mode="HTML")
+        
+        # Send outro/upsell
+        await callback.message.answer(
+            text=texts.Texts.get("ai_services_outro", lang),
+            reply_markup=keyboards.get_ai_services_upsell_keyboard(lang)
+        )
+
+@router.callback_query(F.data == "btn_free_lesson")
+async def handle_btn_free_lesson(callback: CallbackQuery, bot: Bot):
+    async for session in get_session():
+        lang = await get_user_language(callback.from_user.id, session)
+        
+        # Send lesson intro and materials (they are already subscribed)
+        await callback.message.edit_text(texts.Texts.get("lesson_intro", lang))
+        
+        FREE_CH_ID = -1003444130461 
+        try:
+            await bot.copy_message(chat_id=callback.from_user.id, from_chat_id=FREE_CH_ID, message_id=3)
+        except Exception as e:
+            print(f"Error copying Lesson 1: {e}")
+            await callback.message.answer("📹 [VIDEO 1 LOADING ERROR]")
+
+        await callback.message.answer(texts.Texts.get("lesson_materials", lang))
+        try:
+            await bot.copy_message(chat_id=callback.from_user.id, from_chat_id=FREE_CH_ID, message_id=5)
+            await bot.copy_message(chat_id=callback.from_user.id, from_chat_id=FREE_CH_ID, message_id=8)
+        except Exception as e:
+            print(f"Error copying materials: {e}")
+            
+        await asyncio.sleep(4) 
+        await callback.message.answer(texts.Texts.get("lesson_1_ask", lang), reply_markup=keyboards.get_lesson_1_watched_keyboard(lang))
 
 @router.callback_query(F.data == "get_lesson_2")
 async def process_get_lesson_2(callback: CallbackQuery, bot: Bot):

@@ -15,6 +15,10 @@ class Texts:
             "btn_seminar": "📅 Seminarga yozilish",
             "btn_ai_sites": "🤖 AI Saytlar (Top 5)",
             "btn_free_lesson": "🎓 Bepul darsni ko'rish",
+            "welcome_after_subscription": (
+                "Quyidagilardan birini tanlang, Oftob AI Schoolga xush kelibsiz! 🎉\n\n"
+                "Pastdagi tugmalardan birini bosing:"
+            ),
             "not_subscribed": (
                 "❌ <b>Siz hali kanalga obuna bo'lmagansiz.</b>\n\n"
                 "Obuna bo'ling va qaytadan tekshiring 👇"
@@ -181,11 +185,11 @@ class Texts:
             "ai_services_intro": "🚀 <b>Eng foydali AI servislar ro'yxati:</b>\n\n(To'liq ro'yxatni ko'rish uchun kanalga obuna bo'lishingiz kerak)",
             "ai_services_list": (
                 "🤖 <b>TOP AI SERVISLAR:</b>\n\n"
-                "1. <b>ChatGPT</b> - Matn va g'oyalar uchun\n"
-                "2. <b>Midjourney</b> - Rasmlar uchun\n"
-                "3. <b>Runway Gen-2</b> - Videolar uchun\n"
-                "4. <b>ElevenLabs</b> - Ovoz uchun\n"
-                "5. <b>HeyGen</b> - Avatar videolar uchun\n\n"
+                "1. <a href='https://ru.freepik.com/pikaso/upscaler'>Pikaso Upscaler</a> - Fotoni sifatini oshirish\n"
+                "2. <a href='https://chatgpt.com'>ChatGPT</a> - Matn va g'oyalar uchun\n"
+                "3. <a href='https://www.midjourney.com'>Midjourney</a> - Rasmlar yaratish\n"
+                "4. <a href='https://runwayml.com'>Runway Gen-2</a> - Video yaratish\n"
+                "5. <a href='https://elevenlabs.io'>ElevenLabs</a> - Ovoz sintezi\n\n"
                 "<i>Ro'yxat yana to'ldiriladi...</i>"
             ),
             "ai_services_outro": (
@@ -334,6 +338,10 @@ class Texts:
             "btn_seminar": "📅 Записаться на семинар",
             "btn_ai_sites": "🤖 AI Сайты (Топ 5)",
             "btn_free_lesson": "🎓 Смотреть бесплатный урок",
+            "welcome_after_subscription": (
+                "Выберите что Вам нужно, добро пожаловать в Oftob AI School! 🎉\n\n"
+                "Нажмите на одну из кнопок ниже:"
+            ),
             "not_subscribed": (
                 "❌ <b>Вы еще не подписались на канал.</b>\n\n"
                 "Подпишитесь и проверьте снова 👇"
@@ -491,11 +499,11 @@ class Texts:
             "ai_services_intro": "🚀 <b>Список лучших AI сервисов:</b>\n\n(Подпишитесь на канал, чтобы увидеть полный список)",
             "ai_services_list": (
                 "🤖 <b>ТОП AI СЕРВИСЫ:</b>\n\n"
-                "1. <b>ChatGPT</b> - Для текстов и идей\n"
-                "2. <b>Midjourney</b> - Для изображений\n"
-                "3. <b>Runway Gen-2</b> - Для видео\n"
-                "4. <b>ElevenLabs</b> - Для голоса\n"
-                "5. <b>HeyGen</b> - Для аватаров\n\n"
+                "1. <a href='https://ru.freepik.com/pikaso/upscaler'>Pikaso Upscaler</a> - Улучшит качество любого фото\n"
+                "2. <a href='https://chatgpt.com'>ChatGPT</a> - Для текстов и идей\n"
+                "3. <a href='https://www.midjourney.com'>Midjourney</a> - Создание изображений\n"
+                "4. <a href='https://runwayml.com'>Runway Gen-2</a> - Создание видео\n"
+                "5. <a href='https://elevenlabs.io'>ElevenLabs</a> - Синтез голоса\n\n"
                 "<i>Список будет пополняться...</i>"
             ),
             "ai_services_outro": (
