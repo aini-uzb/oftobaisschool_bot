@@ -189,8 +189,7 @@ class Texts:
                 "2. <a href='https://neurosphere.pro/'>Neurosphere</a> - Eski fotoni jonlantirish\n"
                 "3. <a href='https://copilot.microsoft.com/labs/experiments/3d-generations'>Microsoft 3D Gen</a> - 3D yaratish\n"
                 "4. <a href='https://deevid.ai/model/pika-ai'>Pika AI</a> - Kiyimni o'zgartirish\n"
-                "5. <a href='https://runwayml.com/product'>Runway Motion</a> - Videoda siz o'zingizni almashtirish\n\n"
-                "<i>Ro'yxat yana to'ldiriladi...</i>"
+                "5. <a href='https://runwayml.com/product'>Runway Motion</a> - Videoda siz o'zingizni almashtirish"
             ),
             "ai_services_outro": (
                 "Qanday? Bu hali boshlanishi! 🚀\n\n"
@@ -503,8 +502,7 @@ class Texts:
                 "2. <a href='https://neurosphere.pro/'>Neurosphere</a> - Оживит старое фото\n"
                 "3. <a href='https://copilot.microsoft.com/labs/experiments/3d-generations'>Microsoft 3D Gen</a> - Создать 3D\n"
                 "4. <a href='https://deevid.ai/model/pika-ai'>Pika AI</a> - Изменить одежду\n"
-                "5. <a href='https://runwayml.com/product'>Runway Motion</a> - Заменить себя в видео\n\n"
-                "<i>Список будет пополняться...</i>"
+                "5. <a href='https://runwayml.com/product'>Runway Motion</a> - Заменить себя в видео"
             ),
             "ai_services_outro": (
                 "Как вам? Это только начало! 🚀\n\n"
