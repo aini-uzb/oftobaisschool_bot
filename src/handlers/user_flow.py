@@ -72,8 +72,8 @@ async def process_language_selection(callback: CallbackQuery):
             reply_markup=keyboards.get_subscription_keyboard(lang_code)
         )
     
-    # Just show welcome photo WITHOUT bottom keyboard
-    # User will get inline keyboard after subscription
+    # Send main menu keyboard (6 buttons at bottom)
+    await callback.message.answer(texts.Texts.get("main_menu_text", lang_code), reply_markup=keyboards.get_main_menu_keyboard(lang_code))
 
 
 async def check_subscription(bot: Bot, user_id: int, channel_id: str) -> bool:

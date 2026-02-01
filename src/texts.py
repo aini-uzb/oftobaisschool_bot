@@ -186,10 +186,10 @@ class Texts:
             "ai_services_list": (
                 "🤖 <b>TOP AI SERVISLAR:</b>\n\n"
                 "1. <a href='https://ru.freepik.com/pikaso/upscaler'>Pikaso Upscaler</a> - Fotoni sifatini oshirish\n"
-                "2. <a href='https://chatgpt.com'>ChatGPT</a> - Matn va g'oyalar uchun\n"
-                "3. <a href='https://www.midjourney.com'>Midjourney</a> - Rasmlar yaratish\n"
-                "4. <a href='https://runwayml.com'>Runway Gen-2</a> - Video yaratish\n"
-                "5. <a href='https://elevenlabs.io'>ElevenLabs</a> - Ovoz sintezi\n\n"
+                "2. <a href='https://neurosphere.pro/'>Neurosphere</a> - Eski fotoni jonlantirish\n"
+                "3. <a href='https://copilot.microsoft.com/labs/experiments/3d-generations'>Microsoft 3D Gen</a> - 3D yaratish\n"
+                "4. <a href='https://deevid.ai/model/pika-ai'>Pika AI</a> - Kiyimni o'zgartirish\n"
+                "5. <a href='https://runwayml.com/product'>Runway Motion</a> - Videoda siz o'zingizni almashtirish\n\n"
                 "<i>Ro'yxat yana to'ldiriladi...</i>"
             ),
             "ai_services_outro": (
@@ -500,10 +500,10 @@ class Texts:
             "ai_services_list": (
                 "🤖 <b>ТОП AI СЕРВИСЫ:</b>\n\n"
                 "1. <a href='https://ru.freepik.com/pikaso/upscaler'>Pikaso Upscaler</a> - Улучшит качество любого фото\n"
-                "2. <a href='https://chatgpt.com'>ChatGPT</a> - Для текстов и идей\n"
-                "3. <a href='https://www.midjourney.com'>Midjourney</a> - Создание изображений\n"
-                "4. <a href='https://runwayml.com'>Runway Gen-2</a> - Создание видео\n"
-                "5. <a href='https://elevenlabs.io'>ElevenLabs</a> - Синтез голоса\n\n"
+                "2. <a href='https://neurosphere.pro/'>Neurosphere</a> - Оживит старое фото\n"
+                "3. <a href='https://copilot.microsoft.com/labs/experiments/3d-generations'>Microsoft 3D Gen</a> - Создать 3D\n"
+                "4. <a href='https://deevid.ai/model/pika-ai'>Pika AI</a> - Изменить одежду\n"
+                "5. <a href='https://runwayml.com/product'>Runway Motion</a> - Заменить себя в видео\n\n"
                 "<i>Список будет пополняться...</i>"
             ),
             "ai_services_outro": (
