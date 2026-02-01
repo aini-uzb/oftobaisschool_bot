@@ -72,8 +72,7 @@ async def process_language_selection(callback: CallbackQuery):
             reply_markup=keyboards.get_subscription_keyboard(lang_code)
         )
     
-    # Send main menu keyboard (6 buttons at bottom)
-    await callback.message.answer(texts.Texts.get("main_menu_text", lang_code), reply_markup=keyboards.get_main_menu_keyboard(lang_code))
+    # NO bottom menu initially - will appear after user clicks inline buttons
 
 
 async def check_subscription(bot: Bot, user_id: int, channel_id: str) -> bool:
@@ -125,6 +124,9 @@ async def handle_btn_seminar(callback: CallbackQuery):
     async for session in get_session():
         lang = await get_user_language(callback.from_user.id, session)
         await callback.message.edit_text(texts.Texts.get("webinar_info", lang), reply_markup=keyboards.get_seminar_keyboard(lang))
+        
+        # Show main menu after interaction
+        await callback.message.answer(texts.Texts.get("main_menu_text", lang), reply_markup=keyboards.get_main_menu_keyboard(lang))
 
 @router.callback_query(F.data == "btn_ai_sites")
 async def handle_btn_ai_sites(callback: CallbackQuery, bot: Bot):
@@ -139,6 +141,9 @@ async def handle_btn_ai_sites(callback: CallbackQuery, bot: Bot):
             text=texts.Texts.get("ai_services_outro", lang),
             reply_markup=keyboards.get_ai_services_upsell_keyboard(lang)
         )
+        
+        # Show main menu after interaction
+        await callback.message.answer(texts.Texts.get("main_menu_text", lang), reply_markup=keyboards.get_main_menu_keyboard(lang))
 
 @router.callback_query(F.data == "btn_free_lesson")
 async def handle_btn_free_lesson(callback: CallbackQuery, bot: Bot):
@@ -164,6 +169,9 @@ async def handle_btn_free_lesson(callback: CallbackQuery, bot: Bot):
             
         await asyncio.sleep(4) 
         await callback.message.answer(texts.Texts.get("lesson_1_ask", lang), reply_markup=keyboards.get_lesson_1_watched_keyboard(lang))
+        
+        # Show main menu after lesson materials
+        await callback.message.answer(texts.Texts.get("main_menu_text", lang), reply_markup=keyboards.get_main_menu_keyboard(lang))
 
 @router.callback_query(F.data == "get_lesson_2")
 async def process_get_lesson_2(callback: CallbackQuery, bot: Bot):

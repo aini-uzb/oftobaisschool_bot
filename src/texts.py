@@ -10,7 +10,8 @@ class Texts:
                 "<b>Natija?</b>\n"
                 "• Har oy <b>$7,000</b> daromad faqat Sun'iy Intellektdan\n"
                 "• Bitta reelsim <b>9 MILLION</b> prosmotr yig'di\n\n"
-                "Quyidagi bo'limlardan birini tanlang 👇"
+                "🎁 <b>Bepul dars</b> yoki hayotingizni o'zgartiruvchi <b>AI saytlar</b>ni olishni xohlaysizmi?\n"
+                "<i>Kanalga obuna bo'ling va barchasi bepul!</i> 👇"
             ),
             "btn_seminar": "📅 Seminarga yozilish",
             "btn_ai_sites": "🤖 AI Saytlar (Top 5)",
@@ -21,6 +22,7 @@ class Texts:
             ),
             "not_subscribed": (
                 "❌ <b>Siz hali kanalga obuna bo'lmagansiz.</b>\n\n"
+                "🎁 <b>Bepul dars</b> va hayotingizni o'zgartiruvchi <b>AI saytlar</b> olish uchun kanalga obuna bo'ling!\n\n"
                 "Obuna bo'ling va qaytadan tekshiring 👇"
             ),
             "lesson_intro": "🎉 <b>Ajoyib! Mana sizning 1-bepul darsingiz:</b>",
@@ -332,7 +334,8 @@ class Texts:
                 "<b>Результат?</b>\n"
                 "• Каждый месяц <b>$7,000</b> дохода только от ИИ\n"
                 "• Один reels набрал <b>9 МИЛЛИОНОВ</b> просмотров\n\n"
-                "Выберите один из разделов ниже 👇"
+                "🎁 Хотите получить <b>бесплатный урок</b> или <b>AI сайты</b>, которые изменят Вашу жизнь?\n"
+                "<i>Подпишитесь на канал и всё бесплатно!</i> 👇"
             ),
             "btn_seminar": "📅 Записаться на семинар",
             "btn_ai_sites": "🤖 AI Сайты (Топ 5)",
@@ -343,6 +346,7 @@ class Texts:
             ),
             "not_subscribed": (
                 "❌ <b>Вы еще не подписались на канал.</b>\n\n"
+                "🎁 Чтобы получить <b>бесплатный урок</b> и <b>AI сайты</b>, которые изменят Вашу жизнь, подпишитесь на канал!\n\n"
                 "Подпишитесь и проверьте снова 👇"
             ),
             "lesson_intro": "🎉 <b>Отлично! Вот ваш 1-й бесплатный урок:</b>\n\n📹 <i>\"Секреты AI-ролика за $200\"</i>",
