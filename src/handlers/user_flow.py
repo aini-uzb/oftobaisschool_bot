@@ -374,6 +374,8 @@ async def menu_free_lesson_btn(message: Message, state: FSMContext, bot: Bot):
             builder.row(keyboards.InlineKeyboardButton(text=("✅ Obuna bo'ldim" if lang == "uz" else "✅ Я подписался"), callback_data="check_subscription")) # Reusing generic
             
             await message.answer(text, reply_markup=builder.as_markup())
+
+@router.message(F.text.in_({"🎓 Бепул дарс", "🎓 Урок", "🎓 Dars", "🎓 Bepul dars"}))
 async def menu_lesson(message: Message, state: FSMContext, bot: Bot):
      await cleanup_user_request(message, state, bot)
      async for session in get_session():
