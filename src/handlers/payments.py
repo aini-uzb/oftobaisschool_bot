@@ -6,11 +6,30 @@ from sqlalchemy import update, select
 from src import config, texts, keyboards
 from src.database.db import get_session
 from src.database.models import User, Payment
+import string
+import random
 
 router = Router()
 
 class PaymentState(StatesGroup):
     waiting_for_receipt = State()
+
+async def generate_seminar_code(session) -> str:
+    """Generate unique seminar access code in format SEM-XXXX"""
+    while True:
+        # Generate 4 random alphanumeric characters
+        chars = string.ascii_uppercase + string.digits
+        code_suffix = ''.join(random.choices(chars, k=4))
+        code = f"SEM-{code_suffix}"
+        
+        # Check if code already exists
+        result = await session.execute(
+            select(User).where(User.seminar_access_code == code)
+        )
+        existing = result.scalar_one_or_none()
+        
+        if not existing:
+            return code
 
 async def get_user_language(user_id: int, session) -> str:
     result = await session.execute(select(User.language).where(User.user_id == user_id))
@@ -204,12 +223,21 @@ async def process_receipt_upload(message: Message, state: FSMContext, bot: Bot):
         )
         session.add(payment)
         
+        #Generate seminar code if SEMINAR tariff
+        seminar_code = None
+        if tariff == "SEMINAR":
+            seminar_code = await generate_seminar_code(session)
+        
         # Update User Tariff selection
+        update_values = {
+            "tariff": tariff,
+            "payment_status": "pending_check"
+        }
+        if seminar_code:
+            update_values["seminar_access_code"] = seminar_code
+            
         await session.execute(
-            update(User).where(User.user_id == message.from_user.id).values(
-                tariff=tariff,
-                payment_status="pending_check"
-            )
+            update(User).where(User.user_id == message.from_user.id).values(**update_values)
         )
         await session.commit()
         await session.refresh(payment)
@@ -222,6 +250,10 @@ async def process_receipt_upload(message: Message, state: FSMContext, bot: Bot):
             f"💰 Tariff: {tariff} ({p_type})\n"
             f"💵 Summa: {amount:,}".replace(",", " ")
         )
+        
+        if seminar_code:
+            admin_text += f"\n\n🎫 КОД ДОСТУПА: <code>{seminar_code}</code>"
+        
         
         try:
              # Notify all admins
@@ -241,6 +273,6 @@ async def process_receipt_upload(message: Message, state: FSMContext, bot: Bot):
     await state.clear()
     
     if tariff == "SEMINAR":
-        await message.answer(texts.Texts.get("seminar_receipt_received", lang))
+        await message.answer(texts.Texts.get("seminar_receipt_received", lang).format(code=seminar_code or "UNKNOWN"))
     else:
         await message.answer(texts.Texts.get("receipt_accepted", lang))

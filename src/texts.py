@@ -212,8 +212,13 @@ class Texts:
             ),
             "seminar_receipt_received": (
                 "✅ <b>Chek qabul qilindi!</b>\n\n"
-                "Adminlarimiz tekshirib, sizga tez orada aloqaga chiqishadi va manzilni yuborishadi."
+                "⏳ Administratorlar tekshirmoqda...\n\n"
+                "🎫 <b>Sizning kodingiz:</b> <code>{code}</code>\n\n"
+                "<i>To'lovni tasdiqlash uchun 1-2 soat kutishingiz mumkin. Kod tasdiqlangandan keyin seminarimizga kira olasiz!</i>"
             ),
+            "seminar_code_prompt": "🎫 Seminar kodingizni kiriting:",
+            "seminar_code_valid": "✅ <b>Kod tasdiqlandi!</b>\n\n🎉 Seminarimizga xush kelibsiz! Tez orada havolani yuboramiz.",
+            "seminar_code_invalid": "❌ <b>Noto'g'ri kod.</b>\n\nIltimos, tekshirib qayta urinib ko'ring.",
             "course_menu_title": (
                 "📚 <b>AI-KONTENT MASTER</b>\n\n"
                 "Sizning progress: {progress}\n\n"
@@ -527,8 +532,13 @@ class Texts:
             ),
             "seminar_receipt_received": (
                 "✅ <b>Чек принят!</b>\n\n"
-                "Админы проверят и скоро свяжутся с вами, отправив адрес."
+                "⏳ Администраторы проверяют...\n\n"
+                "🎫 <b>Ваш код:</b> <code>{code}</code>\n\n"
+                "<i>Подтверждение оплаты может занять 1-2 часа. После подтверждения кода Вы сможете попасть на семинар!</i>"
             ),
+            "seminar_code_prompt": "🎫 Введите Ваш код для семинара:",
+            "seminar_code_valid": "✅ <b>Код подтвержден!</b>\n\n🎉 Добро пожаловать на семинар! Скоро отправим ссылку.",
+            "seminar_code_invalid": "❌ <b>Неверный код.</b>\n\nПожалуйста, проверьте и попробуйте снова.",
             "course_menu_title": (
                 "📚 <b>AI-CONTENT MASTER</b>\n\n"
                 "Ваш прогресс: {progress}\n\n"

@@ -22,6 +22,10 @@ class User(Base):
     tariff: Mapped[str] = mapped_column(String, nullable=True)  # LITE, PRO, VIP
     payment_status: Mapped[str] = mapped_column(String, default="none")  # none, partial, full
     payment_date: Mapped[datetime] = mapped_column(DateTime, nullable=True)
+    
+    # Seminar access
+    seminar_access_code: Mapped[str] = mapped_column(String, nullable=True)  # SEM-XXXX
+    seminar_payment_confirmed: Mapped[bool] = mapped_column(Boolean, default=False)
 
 class Payment(Base):
     __tablename__ = 'payments'
