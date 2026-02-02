@@ -219,6 +219,14 @@ class Texts:
             "seminar_code_prompt": "🎫 Seminar kodingizni kiriting:",
             "seminar_code_valid": "✅ <b>Kod tasdiqlandi!</b>\n\n🎉 Seminarimizga xush kelibsiz! Tez orada havolani yuboramiz.",
             "seminar_code_invalid": "❌ <b>Noto'g'ri kod.</b>\n\nIltimos, tekshirib qayta urinib ko'ring.",
+            "seminar_payment_confirmed": (
+                "🎉 <b>Tabriklaymiz! To'lovingiz tasdiqlandi!</b>\n\n"
+                "🎫 <b>Sizning kodingiz:</b> <code>{code}</code>\n\n"
+                "👋 Seminarimizga xush kelibsiz! Siz bilan birga bo'lishdan juda xursandmiz!\n\n"
+                "📍 Seminar tafsilotlari, lokatsiya va sizni kutayotgan <b>maxsus bonuslar</b> uchun quyidagi guruhga qo'shiling:\n\n"
+                "👇 <a href='{link}'>Seminar ishtirokchilari guruhi</a>\n\n"
+                "<i>Guruhda ko'rishguncha! ✨</i>"
+            ),
             "course_menu_title": (
                 "📚 <b>AI-KONTENT MASTER</b>\n\n"
                 "Sizning progress: {progress}\n\n"
@@ -539,6 +547,14 @@ class Texts:
             "seminar_code_prompt": "🎫 Введите Ваш код для семинара:",
             "seminar_code_valid": "✅ <b>Код подтвержден!</b>\n\n🎉 Добро пожаловать на семинар! Скоро отправим ссылку.",
             "seminar_code_invalid": "❌ <b>Неверный код.</b>\n\nПожалуйста, проверьте и попробуйте снова.",
+            "seminar_payment_confirmed": (
+                "🎉 <b>Поздравляем! Ваш платеж подтвержден!</b>\n\n"
+                "🎫 <b>Ваш код:</b> <code>{code}</code>\n\n"
+                "👋 Добро пожаловать на семинар! Мы очень рады что Вы с нами!\n\n"
+                "📍 Детали семинара, локация и <b>особые бонусы</b>, которые Вас ждут, в группе:\n\n"
+                "👇 <a href='{link}'>Группа участников семинара</a>\n\n"
+                "<i>Увидимся в группе! ✨</i>"
+            ),
             "course_menu_title": (
                 "📚 <b>AI-CONTENT MASTER</b>\n\n"
                 "Ваш прогресс: {progress}\n\n"

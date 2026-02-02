@@ -52,6 +52,7 @@ WEBINAR_ZOOM_LINK = "https://zoom.us/j/xxxxxxxxx"
 # Links
 COURSE_PLATFORM_LINK = "https://..."
 CHAT_LINK = "https://t.me/+xxxxxx"
+SEMINAR_GROUP_LINK = os.getenv("SEMINAR_GROUP_LINK", "https://t.me/+xxxxxx")  # Private group for seminar participants
 
 # Prices
 PRICES = {
