@@ -20,7 +20,28 @@ async_session = async_sessionmaker(engine, expire_on_commit=False, class_=AsyncS
 
 async def init_db():
     async with engine.begin() as conn:
+        # Create all tables
         await conn.run_sync(Base.metadata.create_all)
+        
+        # Add missing columns if they don't exist (for Railway deployment)
+        try:
+            from sqlalchemy import text
+            # Try to add seminar_access_code column
+            await conn.execute(text(
+                "ALTER TABLE users ADD COLUMN IF NOT EXISTS seminar_access_code VARCHAR"
+            ))
+            print("✅ Added seminar_access_code column (if missing)")
+        except Exception as e:
+            print(f"⚠️  seminar_access_code column: {e}")
+        
+        try:
+            # Try to add seminar_payment_confirmed column
+            await conn.execute(text(
+                "ALTER TABLE users ADD COLUMN IF NOT EXISTS seminar_payment_confirmed BOOLEAN DEFAULT FALSE"
+            ))
+            print("✅ Added seminar_payment_confirmed column (if missing)")
+        except Exception as e:
+            print(f"⚠️  seminar_payment_confirmed column: {e}")
 
 async def get_session() -> AsyncSession:
     async with async_session() as session:
