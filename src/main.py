@@ -45,7 +45,7 @@ force_single_instance()
 try:
     from src import config
     from src.database.db import init_db
-    from src.handlers import user_flow, payments, admin, course, homework, survey
+    from src.handlers import user_flow, payments, payments_admin, admin, course, homework, survey
     from src import scheduler_jobs
 except Exception as e:
     import traceback
@@ -77,6 +77,7 @@ async def main():
     dp.include_router(survey.router)
     dp.include_router(user_flow.router)
     dp.include_router(payments.router)
+    dp.include_router(payments_admin.router)
     dp.include_router(admin.router)
     dp.include_router(course.router)
     dp.include_router(homework.router)
