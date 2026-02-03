@@ -76,7 +76,7 @@ async def process_confirm_payment(callback: CallbackQuery, bot: Bot):
             lang = user.language or "uz"
             
             # Send confirmation to user
-            if payment.tariff == "SEMINAR":
+            if payment.tariff in ["SEMINAR", "SEMINAR_ONLINE", "SEMINAR_OFFLINE"]:
                 # Send warm invitation with group link
                 invitation_text = texts.Texts.get("seminar_payment_confirmed", lang).format(
                     code=user.seminar_access_code or "UNKNOWN",

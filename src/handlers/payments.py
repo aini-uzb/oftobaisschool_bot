@@ -223,9 +223,9 @@ async def process_receipt_upload(message: Message, state: FSMContext, bot: Bot):
         )
         session.add(payment)
         
-        #Generate seminar code if SEMINAR tariff
+        #Generate seminar code if SEMINAR tariff (online or offline)
         seminar_code = None
-        if tariff == "SEMINAR":
+        if tariff in ["SEMINAR", "SEMINAR_ONLINE", "SEMINAR_OFFLINE"]:
             seminar_code = await generate_seminar_code(session)
         
         # Update User Tariff selection
@@ -272,7 +272,7 @@ async def process_receipt_upload(message: Message, state: FSMContext, bot: Bot):
 
     await state.clear()
     
-    if tariff == "SEMINAR":
+    if tariff in ["SEMINAR", "SEMINAR_ONLINE", "SEMINAR_OFFLINE"]:
         await message.answer(texts.Texts.get("seminar_receipt_received", lang).format(code=seminar_code or "UNKNOWN"))
     else:
         await message.answer(texts.Texts.get("receipt_accepted", lang))

@@ -30,8 +30,20 @@ def get_seminar_keyboard(lang: str = "uz"):
     text_manager = texts.Texts.get("seminar_manager_option", lang)
     
     builder = InlineKeyboardBuilder()
-    builder.row(InlineKeyboardButton(text=text_pay, callback_data="seminar_pay"))
+    builder.row(InlineKeyboardButton(text=text_pay, callback_data="show_seminar_payment_options"))
     builder.row(InlineKeyboardButton(text=text_manager, callback_data="survey_start_q1"))
+    return builder.as_markup()
+
+def get_seminar_payment_options_keyboard(lang: str = "uz"):
+    """Online/Offline seminar payment options"""
+    text_online = f"💻 Onlayn - {config.SEMINAR_PRICES['online']:,} so'm".replace(",", " ") if lang == "uz" else f"💻 Онлайн - {config.SEMINAR_PRICES['online']:,} сум".replace(",", " ")
+    text_offline = f"🏢 Oflayn - {config.SEMINAR_PRICES['offline']:,} so'm".replace(",", " ") if lang == "uz" else f"🏢 Офлайн - {config.SEMINAR_PRICES['offline']:,} сум".replace(",", " ")
+    text_back = "⬅️ Orqaga" if lang == "uz" else "⬅️ Назад"
+    
+    builder = InlineKeyboardBuilder()
+    builder.row(InlineKeyboardButton(text=text_online, callback_data="pay_seminar_online"))
+    builder.row(InlineKeyboardButton(text=text_offline, callback_data="pay_seminar_offline"))
+    builder.row(InlineKeyboardButton(text=text_back, callback_data="btn_seminar"))
     return builder.as_markup()
 
 def get_welcome_keyboard(lang: str = "uz"):

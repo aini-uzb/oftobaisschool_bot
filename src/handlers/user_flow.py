@@ -123,10 +123,55 @@ async def process_check_subscription_lesson(callback: CallbackQuery, bot: Bot):
 async def handle_btn_seminar(callback: CallbackQuery):
     async for session in get_session():
         lang = await get_user_language(callback.from_user.id, session)
-        await callback.message.edit_text(texts.Texts.get("webinar_info", lang), reply_markup=keyboards.get_seminar_keyboard(lang))
+        await callback.message.edit_text(texts.Texts.get("seminar_info", lang), reply_markup=keyboards.get_seminar_keyboard(lang))
         
         # Show main menu after interaction
         await callback.message.answer(texts.Texts.get("main_menu_text", lang), reply_markup=keyboards.get_main_menu_keyboard(lang))
+
+@router.callback_query(F.data == "show_seminar_payment_options")
+async def handle_show_seminar_payment_options(callback: CallbackQuery):
+    async for session in get_session():
+        lang = await get_user_language(callback.from_user.id, session)
+        text = "🎫 <b>Seminar uchun to'lov turini tanlang:</b>" if lang == "uz" else "🎫 <b>Выберите тип оплаты за семинар:</b>"
+        await callback.message.edit_text(text, reply_markup=keyboards.get_seminar_payment_options_keyboard(lang))
+
+@router.callback_query(F.data == "pay_seminar_online")
+async def handle_pay_seminar_online(callback: CallbackQuery, state: FSMContext):
+    from src.handlers.payments import PaymentState
+    async for session in get_session():
+        lang = await get_user_language(callback.from_user.id, session)
+        
+        await state.set_state(PaymentState.waiting_for_receipt)
+        await state.update_data(
+            tariff="SEMINAR_ONLINE",
+            amount=config.SEMINAR_PRICES['online'],
+            type="full",
+            lang=lang
+        )
+        
+        await callback.message.edit_text(
+            texts.Texts.get("seminar_payment_instructions_online", lang),
+            reply_markup=None
+        )
+
+@router.callback_query(F.data == "pay_seminar_offline")
+async def handle_pay_seminar_offline(callback: CallbackQuery, state: FSMContext):
+    from src.handlers.payments import PaymentState
+    async for session in get_session():
+        lang = await get_user_language(callback.from_user.id, session)
+        
+        await state.set_state(PaymentState.waiting_for_receipt)
+        await state.update_data(
+            tariff="SEMINAR_OFFLINE",
+            amount=config.SEMINAR_PRICES['offline'],
+            type="full",
+            lang=lang
+        )
+        
+        await callback.message.edit_text(
+            texts.Texts.get("seminar_payment_instructions_offline", lang),
+            reply_markup=None
+        )
 
 @router.callback_query(F.data == "btn_ai_sites")
 async def handle_btn_ai_sites(callback: CallbackQuery, bot: Bot):

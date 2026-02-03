@@ -61,4 +61,9 @@ PRICES = {
     "VIP": {"full": 25000000, "half": 12500000, "original": 40000000}
 }
 
+SEMINAR_PRICES = {
+    "online": 59000,
+    "offline": 99000
+}
+
 DISCOUNT_END_DATE = "2026-03-18"

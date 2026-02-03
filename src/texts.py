@@ -220,12 +220,37 @@ class Texts:
             "seminar_code_valid": "✅ <b>Kod tasdiqlandi!</b>\n\n🎉 Seminarimizga xush kelibsiz! Tez orada havolani yuboramiz.",
             "seminar_code_invalid": "❌ <b>Noto'g'ri kod.</b>\n\nIltimos, tekshirib qayta urinib ko'ring.",
             "seminar_payment_confirmed": (
-                "🎉 <b>Tabriklaymiz! To'lovingiz tasdiqlandi!</b>\n\n"
-                "🎫 <b>Sizning kodingiz:</b> <code>{code}</code>\n\n"
-                "👋 Seminarimizga xush kelibsiz! Siz bilan birga bo'lishdan juda xursandmiz!\n\n"
-                "📍 Seminar tafsilotlari, lokatsiya va sizni kutayotgan <b>maxsus bonuslar</b> uchun quyidagi guruhga qo'shiling:\n\n"
-                "👇 <a href='{link}'>Seminar ishtirokchilari guruhi</a>\n\n"
-                "<i>Guruhda ko'rishguncha! ✨</i>"
+                "✨✨✨ <b>TA﻿BRIKLAYMIZ!</b> ✨✨✨\n\n"
+                "🎉 <b>Sizning to'lovingiz tasdiqlandi!</b>\n\n"
+                "──────────────\n\n"
+                "🎫 <b>Sizning shaxsiy kodingiz:</b>\n"
+                "🔑 <code>{code}</code>\n\n"
+                "──────────────\n\n"
+                "👋 Seminarimizga <b>xush kelibsiz!</b>\n"
+                "Siz bilan birga bo'lishdan juda xursandmiz!\n\n"
+                "📍 Seminar haqida <b>barcha ma'lumotlar</b>:\n"
+                "• Aniq manzil va lokatsiya\n"
+                "• Kun va vaqt tafsilotlari\n"
+                "• Sizni kutayotgan <b>maxsus bonuslar</b> 🎁\n\n"
+                "👇 Guruhga qo'shiling:\n"
+                "<a href='{link}'>👥 Seminar ishtirokchilari guruhi</a>\n\n"
+                "<i>Ko'rishguncha! Sizni kutib qolamiz! ✨</i>"
+            ),
+            "seminar_payment_instructions_online": (
+                "💻 <b>Onlayn seminar uchun to'lov</b>\n\n"
+                "Narx: <b>59 000 so'm</b>\n\n"
+                "Karta raqami:\n"
+                f"<code>{config.CARD_NUMBER}</code>\n"
+                f"<b>{config.CARD_HOLDER}</b>\n\n"
+                "To'lov qilgach, chekni shu yerga yuboring 👇"
+            ),
+            "seminar_payment_instructions_offline": (
+                "🏢 <b>Oflayn seminar uchun to'lov</b>\n\n"
+                "Narx: <b>99 000 so'm</b>\n\n"
+                "Karta raqami:\n"
+                f"<code>{config.CARD_NUMBER}</code>\n"
+                f"<b>{config.CARD_HOLDER}</b>\n\n"
+                "To'lov qilgach, chekni shu yerga yuboring 👇"
             ),
             "course_menu_title": (
                 "📚 <b>AI-KONTENT MASTER</b>\n\n"
@@ -548,12 +573,37 @@ class Texts:
             "seminar_code_valid": "✅ <b>Код подтвержден!</b>\n\n🎉 Добро пожаловать на семинар! Скоро отправим ссылку.",
             "seminar_code_invalid": "❌ <b>Неверный код.</b>\n\nПожалуйста, проверьте и попробуйте снова.",
             "seminar_payment_confirmed": (
-                "🎉 <b>Поздравляем! Ваш платеж подтвержден!</b>\n\n"
-                "🎫 <b>Ваш код:</b> <code>{code}</code>\n\n"
-                "👋 Добро пожаловать на семинар! Мы очень рады что Вы с нами!\n\n"
-                "📍 Детали семинара, локация и <b>особые бонусы</b>, которые Вас ждут, в группе:\n\n"
-                "👇 <a href='{link}'>Группа участников семинара</a>\n\n"
-                "<i>Увидимся в группе! ✨</i>"
+                "✨✨✨ <b>ПОЗДРАВЛЯЕМ!</b> ✨✨✨\n\n"
+                "🎉 <b>Ваш платеж подтвержден!</b>\n\n"
+                "──────────────\n\n"
+                "🎫 <b>Ваш личный код:</b>\n"
+                "🔑 <code>{code}</code>\n\n"
+                "──────────────\n\n"
+                "👋 <b>Добро пожаловать на семинар!</b>\n"
+                "Мы очень рады что Вы с нами!\n\n"
+                "📍 <b>Вся информация</b> о семинаре:\n"
+                "• Точный адрес и локация\n"
+                "• Детали дня и времени\n"
+                "• <b>Особые бонусы</b>, которые Вас ждут 🎁\n\n"
+                "👇 Присоединяйтесь к группе:\n"
+                "<a href='{link}'>👥 Группа участников семинара</a>\n\n"
+                "<i>Увидимся! Ждем Вас! ✨</i>"
+            ),
+            "seminar_payment_instructions_online": (
+                "💻 <b>Оплата за онлайн семинар</b>\n\n"
+                "Цена: <b>59 000 сум</b>\n\n"
+                "Номер карты:\n"
+                f"<code>{config.CARD_NUMBER}</code>\n"
+                f"<b>{config.CARD_HOLDER}</b>\n\n"
+                "После оплаты отправьте чек сюда 👇"
+            ),
+            "seminar_payment_instructions_offline": (
+                "🏢 <b>Оплата за офлайн семинар</b>\n\n"
+                "Цена: <b>99 000 сум</b>\n\n"
+                "Номер карты:\n"
+                f"<code>{config.CARD_NUMBER}</code>\n"
+                f"<b>{config.CARD_HOLDER}</b>\n\n"
+                "После оплаты отправьте чек сюда 👇"
             ),
             "course_menu_title": (
                 "📚 <b>AI-CONTENT MASTER</b>\n\n"
