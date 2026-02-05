@@ -369,7 +369,7 @@ async def menu_webinar(message: Message, state: FSMContext, bot: Bot):
 async def menu_seminar_btn(message: Message, state: FSMContext, bot: Bot):
     await menu_webinar(message, state, bot)
 
-@router.message(F.text.in_({"🤖 AI Saytlar (Top 5)", "🤖 AI Сайты (Топ 5)"}))
+@router.message(F.text.in_({"🤖 AI Saytlar", "🤖 AI Сайты"}))
 async def menu_ai_sites_btn(message: Message, state: FSMContext, bot: Bot):
     await menu_ai_services(message, state, bot)
 

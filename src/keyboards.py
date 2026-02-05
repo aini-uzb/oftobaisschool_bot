@@ -17,10 +17,9 @@ def get_main_menu_keyboard(lang: str = "uz"):
         KeyboardButton(text=texts.Texts.get("menu_ai_services", lang)),
         KeyboardButton(text=texts.Texts.get("menu_tariffs", lang))
     )
-    # Row 2: 3 buttons
+    # Row 2: 2 buttons
     builder.row(
         KeyboardButton(text=texts.Texts.get("menu_webinar", lang)),
-        KeyboardButton(text=texts.Texts.get("menu_lesson", lang)),
         KeyboardButton(text=texts.Texts.get("menu_support", lang))
     )
     return builder.as_markup(resize_keyboard=True)
@@ -51,15 +50,12 @@ def get_welcome_keyboard(lang: str = "uz"):
     Main Start Keyboard:
     1. Seminar
     2. AI Sites
-    3. Free Lesson
     """
     builder = ReplyKeyboardBuilder()
     # Row 1: Seminar
     builder.row(KeyboardButton(text=texts.Texts.get("btn_seminar", lang)))
     # Row 2: AI Sites
     builder.row(KeyboardButton(text=texts.Texts.get("btn_ai_sites", lang)))
-    # Row 3: Free Lesson
-    builder.row(KeyboardButton(text=texts.Texts.get("btn_free_lesson", lang)))
     
     return builder.as_markup(resize_keyboard=True)
 
@@ -68,15 +64,12 @@ def get_welcome_inline_keyboard(lang: str = "uz"):
     Welcome Inline Keyboard (shown in chat after subscription):
     1. Seminar
     2. AI Sites
-    3. Free Lesson
     """
     builder = InlineKeyboardBuilder()
     # Row 1: Seminar
     builder.row(InlineKeyboardButton(text=texts.Texts.get("btn_seminar", lang), callback_data="btn_seminar"))
     # Row 2: AI Sites
     builder.row(InlineKeyboardButton(text=texts.Texts.get("btn_ai_sites", lang), callback_data="btn_ai_sites"))
-    # Row 3: Free Lesson
-    builder.row(InlineKeyboardButton(text=texts.Texts.get("btn_free_lesson", lang), callback_data="btn_free_lesson"))
     
     return builder.as_markup()
 

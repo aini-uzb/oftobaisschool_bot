@@ -14,7 +14,7 @@ class Texts:
                 "<i>Kanalga obuna bo'ling va barchasi bepul!</i> 👇"
             ),
             "btn_seminar": "📅 Seminarga yozilish",
-            "btn_ai_sites": "🤖 AI Saytlar (Top 5)",
+            "btn_ai_sites": "🤖 AI Saytlar",
             "btn_free_lesson": "🎓 Bepul darsni ko'rish",
             "welcome_after_subscription": (
                 "Quyidagilardan birini tanlang, Oftob AI Schoolga xush kelibsiz! 🎉\n\n"
@@ -388,7 +388,7 @@ class Texts:
                 "<i>Подпишитесь на канал и всё бесплатно!</i> 👇"
             ),
             "btn_seminar": "📅 Записаться на семинар",
-            "btn_ai_sites": "🤖 AI Сайты (Топ 5)",
+            "btn_ai_sites": "🤖 AI Сайты",
             "btn_free_lesson": "🎓 Смотреть бесплатный урок",
             "welcome_after_subscription": (
                 "Выберите что Вам нужно, добро пожаловать в Oftob AI School! 🎉\n\n"
