@@ -203,7 +203,8 @@ class Texts:
                 "3. <a href='https://copilot.microsoft.com/labs/experiments/3d-generations'>Microsoft 3D Gen</a> - 3D yaratish\n"
                 "4. <a href='https://deevid.ai/model/pika-ai'>Pika AI</a> - Kiyimni o'zgartirish\n"
                 "5. <a href='https://runwayml.com/product'>Runway Motion</a> - Videoda siz o'zingizni almashtirish\n"
-                "6. <a href='https://wan.video/'>Wan.video</a> - Bepul AI rolik yaratish instrumenti"
+                "6. <a href='https://wan.video/'>Wan.video</a> - Bepul AI rolik yaratish instrumenti\n"
+                "7. <a href='https://hera.video/'>Hera.video</a> - Eng yaxshi animatsiyalar yaratish"
             ),
             "ai_services_outro": (
                 "Qanday? Bu hali boshlanishi! 🚀\n\n"
@@ -568,7 +569,8 @@ class Texts:
                 "3. <a href='https://copilot.microsoft.com/labs/experiments/3d-generations'>Microsoft 3D Gen</a> - Создать 3D\n"
                 "4. <a href='https://deevid.ai/model/pika-ai'>Pika AI</a> - Изменить одежду\n"
                 "5. <a href='https://runwayml.com/product'>Runway Motion</a> - Заменить себя в видео\n"
-                "6. <a href='https://wan.video/'>Wan.video</a> - Бесплатный AI инструмент для создания роликов"
+                "6. <a href='https://wan.video/'>Wan.video</a> - Бесплатный AI инструмент для создания роликов\n"
+                "7. <a href='https://hera.video/'>Hera.video</a> - Лучшие AI анимации"
             ),
             "ai_services_outro": (
                 "Как вам? Это только начало! 🚀\n\n"
