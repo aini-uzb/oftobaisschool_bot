@@ -356,12 +356,13 @@ async def menu_tariffs(message: Message, state: FSMContext, bot: Bot):
 
 @router.message(F.text.in_({"📅 Вебинар", "📅 Vebinar", "📅 Seminar", "📅 Семинар"}))
 async def menu_webinar(message: Message, state: FSMContext, bot: Bot):
+     print(f"DEBUG menu_webinar: Received text: '{message.text}'")
      await cleanup_user_request(message, state, bot)
      async for session in get_session():
         lang = await get_user_language(message.from_user.id, session)
         await send_and_track(
             message, state,
-            text=texts.Texts.get("webinar_info", lang),
+            text=texts.Texts.get("seminar_info", lang),
             reply_markup=keyboards.get_seminar_keyboard(lang)
         )
 
