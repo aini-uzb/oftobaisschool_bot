@@ -6,12 +6,13 @@ class Texts:
             "welcome": (
                 "Assalomu alaykum! 👋\n"
                 "Men <b>Baxrom Xakimov</b>.\n\n"
-                "6 oy oldin AI bilan faol shug'ullana boshladim.\n"
-                "<b>Natija?</b>\n"
-                "• Har oy <b>$7,000</b> daromad faqat Sun'iy Intellektdan\n"
+                "4 yillik AI tajribamni siz bilan bo'lishmoqchiman!\n"
+                "<b>Natijalarim:</b>\n"
+                "• Har oy <b>$7,000+</b> daromad faqat Sun'iy Intellektdan\n"
                 "• Bitta reelsim <b>9 MILLION</b> prosmotr yig'di\n\n"
-                "🎁 <b>Bepul dars</b> yoki hayotingizni o'zgartiruvchi <b>AI saytlar</b>ni olishni xohlaysizmi?\n"
-                "<i>Kanalga obuna bo'ling va barchasi bepul!</i> 👇"
+                "🚀 <b>O'zbekistondagi yagona va eng kuchli AI SEMINAR</b>ni o'tkazaman!\n"
+                "Bu seminar hayotingizni o'zgartirishi mumkin.\n\n"
+                "👉 <i>Kanalga obuna bo'ling — har kuni bepul AI yangiliklar, promptlar va lashaku!\n\n"
             ),
             "btn_seminar": "📅 Seminarga yozilish",
             "btn_ai_sites": "🤖 AI Saytlar",
@@ -22,8 +23,8 @@ class Texts:
             ),
             "not_subscribed": (
                 "❌ <b>Siz hali kanalga obuna bo'lmagansiz.</b>\n\n"
-                "🎁 <b>Bepul dars</b> va hayotingizni o'zgartiruvchi <b>AI saytlar</b> olish uchun kanalga obuna bo'ling!\n\n"
-                "Obuna bo'ling va qaytadan tekshiring 👇"
+                "📢 Kanalda har kuni <b>bepul AI yangiliklar</b>, promptlar va lashak!\n"
+                "Seminarga kirish uchun avval obuna bo'ling 👇"
             ),
             "lesson_intro": "🎉 <b>Ajoyib! Mana sizning 1-bepul darsingiz:</b>",
             "lesson_1_ask": (
@@ -381,12 +382,13 @@ class Texts:
             "welcome": (
                 "Ассаламу алейкум! 👋\n"
                 "Я <b>Бахром Хакимов</b>.\n\n"
-                "6 месяцев назад начал активно работать с AI.\n"
-                "<b>Результат?</b>\n"
-                "• Каждый месяц <b>$7,000</b> дохода только от ИИ\n"
+                "4 года опыта в AI — и я готов поделиться с вами!\n"
+                "<b>Мои результаты:</b>\n"
+                "• <b>$7,000+</b> ежемесячно только от ИИ\n"
                 "• Один reels набрал <b>9 МИЛЛИОНОВ</b> просмотров\n\n"
-                "🎁 Хотите получить <b>бесплатный урок</b> или <b>AI сайты</b>, которые изменят Вашу жизнь?\n"
-                "<i>Подпишитесь на канал и всё бесплатно!</i> 👇"
+                "🚀 <b>Единственный и самый мощный AI СЕМИНАР в Узбекистане!</b>\n"
+                "Этот семинар может изменить вашу жизнь.\n\n"
+                "👉 <i>Подпишитесь на канал — каждый день бесплатные AI новости, промпты и лайфхаки!</i> 👇"
             ),
             "btn_seminar": "📅 Записаться на семинар",
             "btn_ai_sites": "🤖 AI Сайты",
@@ -397,8 +399,8 @@ class Texts:
             ),
             "not_subscribed": (
                 "❌ <b>Вы еще не подписались на канал.</b>\n\n"
-                "🎁 Чтобы получить <b>бесплатный урок</b> и <b>AI сайты</b>, которые изменят Вашу жизнь, подпишитесь на канал!\n\n"
-                "Подпишитесь и проверьте снова 👇"
+                "📢 На канале каждый день <b>бесплатные AI новости</b>, промпты и лайфхаки!\n"
+                "Для доступа к семинару сначала подпишитесь 👇"
             ),
             "lesson_intro": "🎉 <b>Отлично! Вот ваш 1-й бесплатный урок:</b>\n\n📹 <i>\"Секреты AI-ролика за $200\"</i>",
             "lesson_1_ask": (
