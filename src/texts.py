@@ -12,7 +12,7 @@ class Texts:
                 "• Bitta reelsim <b>9 MILLION</b> prosmotr yig'di\n\n"
                 "🚀 <b>O'zbekistondagi yagona va eng kuchli AI SEMINAR</b>ni o'tkazaman!\n"
                 "Bu seminar hayotingizni o'zgartirishi mumkin.\n\n"
-                "👉 <i>Kanalga obuna bo'ling — har kuni bepul AI yangiliklar, promptlar va lashaku!\n\n"
+                "👉 <i>Kanalga obuna bo'ling — har kuni bepul AI yangiliklar, promptlar va lashaku!</i> 👇\n\n"
             ),
             "btn_seminar": "📅 Seminarga yozilish",
             "btn_ai_sites": "🤖 AI Saytlar",
